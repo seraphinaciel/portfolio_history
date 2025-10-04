@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* CSS Document */
+/* ---------------------------------------------------------------------- */
+/* Basic */
+/* ---------------------------------------------------------------------- */
+body {
+	width:auto;
+	color:gray; 
+	padding-top:75px;
+}
+
+a:link, a:visited, a:hover, a:active{text-decoration:none;}
+/* 방문전, 방문후, 마우스 오버, 클릭 outline:1px solid red;*/
+li{list-style:none;}
+div[class^="col-"]{padding:0;}
+
+p {
+	margin:0; 
+	padding:0;
+}
+.page-header{
+	margin:5px auto; 
+	padding:0;
+}
+/* ================================================ */
+/* Center */
+/* ================================================ */
+.c-content{
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	margin:0; padding:0;
+}
+.container-fluid {width:100%; margin:0;}
+.c-content .row {margin:0; padding:0;}
+
+/* 별 */
+.img-stars{
+	height:20px;
+	background:url('../../img/img-stars.png') no-repeat;
+	background-size:contain;
+}
+.img-5st{
+	height:20px;
+	background:url('http://s.images-iherb.com/i/retina/stars/50.png') no-repeat;
+	background-size:contain;
+}
+.img-4st{
+	height:20px;
+	background:url('http://s.images-iherb.com/i/retina/stars/40.png') no-repeat;
+	background-size:contain;
+}
+.img-3st{
+	height:20px;
+	background:url('http://s.images-iherb.com/i/retina/stars/30.png') no-repeat;
+	background-size:contain;
+}
+.img-2st{
+	height:20px;
+	background:url('http://s.images-iherb.com/i/retina/stars/20.png') no-repeat;
+	background-size:contain;
+}
+.img-1st{
+	height:20px;
+	background:url('http://s.images-iherb.com/i/retina/stars/10.png') no-repeat;
+	background-size:contain;
+}
+.p-height{
+	height:60px;
+	overflow:hidden;
+}	
+.p-th-height{
+	height:75px;
+	overflow:hidden;
+}	
+
+/* ================================================ */
+/* Footer */
+/* ================================================ */
+
+#footer{
+  height:200px;
+  color:dimgray;
+  text-align:center;
+  margin-top:20px;
+  border-top:1px solid #ccc;
+}
+#footer p{margin-top:50px;}
+#footer a{color:dimgray;}
+	#footer a:hover{text-decoration:underline;}

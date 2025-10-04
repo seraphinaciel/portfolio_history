@@ -1,0 +1,379 @@
+@charset "utf-8";
+/* CSS Document */
+
+a {color:gray;}
+
+/* ------------------------------------------------------------ */
+/* 1. 상품소개 */
+/* ------------------------------------------------------------ */
+/* 이미지 */
+.pd-image-box, .pd-name-box {height:350px;}
+.pd-image-box img{width:100%; margin:25px 0;}
+
+/* 상품내용 */
+.pd-name {
+	padding:25px 10px;
+	word-spacing:2px;
+	letter-spacing:1px;
+	line-height:140%;
+}
+.pd-name h3 {font-family:'Roboto Condensed','Jeju Gothic', serif;}
+.c-brandStar p {margin-top:5px;}
+.c-line{
+	margin-top:20px;
+	font:bold 1.3em 'Open Sans';
+	color:YellowGreen;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+}
+.tooltip > .tooltip-inner {
+	max-width: 400px;
+	/* If max-width does not work, try using width instead */
+	width: 400px;
+	background-color: #f5f5f5;
+	padding:10px 10px 0;
+	border: 1px solid DimGray; 
+}
+.tooltip > .tooltip-inner p {
+	font-size: 1em;
+	text-align:left;
+	color: gray; 
+	line-height:160%;
+	margin-bottom:10px;
+}
+.tooltip > .tooltip-inner span {
+	color:DimGray;
+	font-weight:bold;
+	border-bottom:1px solid Gray;
+}
+.tooltip.bottom > .tooltip-arrow {
+      border-bottom: 5px solid DimGray;
+  }
+.img-stars{width:30%;}
+.s-valuation{margin-top:-1em; color:DimGray;}
+.s-valuation:hover{text-decoration:underline;}
+
+/* 상품가격 */
+.pd-price-box .table {
+	margin:25px 0; 
+	padding:0;
+	background:#f5f5f5;
+	height:300px;
+}
+.pd-price-box .table td {border:0;}
+.pd-price-box .table td[colspan="2"] {padding:0 20px;}
+.pd-price-box .table input {padding:0;}
+.pd-price-box .table .btn-success {margin-bottom:5px;}
+.pd-price-box .table .half-sale {
+	border:3px solid #5cb85c;
+	background:#fafae9;
+	padding:10px 10px 5px;
+}
+.pd-price-box .table .color-sale {
+	font:bold 1.3em 'Open Sans',sans-serif; 
+	color:DeepPink;
+}
+
+/* ------------------------------------------------------------ */
+/* 2. 상세내역 */
+/* ------------------------------------------------------------ */
+
+/* 네비게이션 */
+.c-content {position: relative;}
+.c-content .navbar {
+	margin-bottom: -115px;
+	border:0;
+}
+.affix {
+	top:75px;
+	/* width: 64.5%; */
+	width: 66.5%;
+	z-index: 5 !important;
+	-webkit-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+	background-color: yellowgreen;
+	border-color: #F44336;
+}
+.affix a {
+	color: black !important;
+	padding: 15px !important;
+	-webkit-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+}
+.affix-top a {padding: 25px !important;}
+.affix + .container-fluid {padding-top: 95px;}
+.navbar-brand span{border-right:2px solid white;}
+
+/* 내용 */
+
+#section1, #section2,#section3, #section4, #footer-Rv {
+	padding-top:125px;
+	color: dimgray;
+	height:auto;
+}
+#section2, #section3, #section4, #footer-Rv { margin-top:-125px;}
+/* 
+#section1 {background-color: #009688;}
+#section2 {background-color:#673ab7;}
+#section3 {background-color: #ff9800;}
+#section4 {background-color: #00bcd4;}
+*/
+
+/* ------------------------------------------------------------ */
+/* section1 */
+/* ------------------------------------------------------------ */
+#section1 .name-box a:hover {text-decoration:underline;}
+#section1 .panel-group {margin-top:10px;}
+#section1 .f-price {
+	font-weight:bold; 
+	font-size:1.3em;
+	color:black;
+}
+#section1 .col-sm-12 .btn {padding:10px; margin-top:10px;}
+#section1 .panel-body .carousel-inner {
+	width:90%; 
+	height:210px;
+	margin:0 auto;
+}
+#section1 .panel-body .img-stars{width:50%;}
+#section1 .panel-body .item {height:210px;}
+#section1 .panel-body .item .row {margin:0 auto;}
+#section1 .panel-body .thumbnail {
+	margin:0 10px;
+	height:209px;
+	text-align:center;
+}
+#section1 .panel-body .thumbnail p {text-align:left;}
+#section1 img[alt="cal"] {width:70%;}
+#section1 .panel-body .thumbnail .s-valuation{
+	font-size:10px; 
+	color:DimGray;
+}
+#section1 .panel-body .thumbnail p{
+	font-size:13px;
+	color:dimgray;
+	margin:0 auto; 
+}
+#section1 .panel-body .thumbnail span{
+	font-size:1.2em;
+	font-weight:bold;
+	color:black; 
+	text-align:left;
+}
+.LR-btn .carousel-control.left, .carousel-control.right {background-image:none !important;}
+.LR-btn .carousel-control {
+	position:absolute; top:40%; bottom:auto;
+	padding-top:4px;
+	width:30px; height:30px;
+	text-shadow:none;
+	color:#ccc;
+	opacity:1;
+}
+.LR-btn .carousel-control.right {left:auto; right:5px;}
+.LR-btn .carousel-control.left {right:auto;	left:5px;}
+	.LR-btn .carousel-control:hover {color: yellowgreen;}
+
+/* ------------------------------------------------------------ */
+/* section2 */
+/* ------------------------------------------------------------ */
+#section2 .panel-body {margin:0;}
+#section2 ul li {list-style-type:square;}
+#section2 .col-sm-6 {padding:0 20px;}
+#section2 .panel-body h4 {
+	font-weight:bold; 
+	border-bottom:1px solid gray;
+}
+#section2 .panel-body ul, #section2 .panel-body p {margin:-5px 0 20px;}
+#section2 p {padding-left:20px;}
+#section2 span {font-weight:bold;}
+#section2 #panel-info {margin-bottom:20px;}
+#section2 .panel-collapse {text-align:center;}
+#section2 .chart h4 { border:0;}
+#section2 .chart .row {padding:2px 0;}
+#section2 .chart a {
+	color:YellowGreen;
+	text-indent:1em;
+}
+#section2 .chart a:hover {text-decoration:underline;}
+
+/* ------------------------------------------------------------ */
+/* section3 */
+/* ------------------------------------------------------------ */
+
+/* a:hover */
+#section3 a:hover {text-decoration:underline;}
+
+/* 여백 맞추기 */
+#section3 .panel-body .col-sm-4 {padding:0 10px;}
+#section3 .panel-body  .row {
+	margin:0 auto; 
+	background:#f5f5f5; 
+	height:210px;
+}
+#section3 .panel-body  .starbox {margin-left:-10px;}
+#section3 .panel-body  .unlike .row {margin-right:-10px;}
+	
+/* 평가-star box- */
+.headstar {
+	font-size:1.2em; 	
+	padding:0 25px;
+}
+	
+/* 평가 별 */
+/* #section3 .glystar p, #section3 .glystar span {border:1px solid black;} */
+#section3 .glystar p {padding-left:20px; margin-bottom:8px;}
+#section3 .glystar span {
+	font-size:1.1em; 
+	color:YellowGreen;
+	margin:5px auto; 
+	height:17px;
+}
+#section3 .glystar .glyphicon-star-empty {color:#ccc;}
+
+/* progress-bar */
+#section3 .col-xs-7 {
+	padding:0 20px 0 10px; 
+	margin-top:-10px;
+}
+#section3 .progress {
+	margin:15px auto; 
+	height:20px; 
+	background:white;
+}
+#section3 .progress-bar {background:YellowGreen;}
+
+/* scroll */
+blockquote {border:0; margin-left:10px;}
+blockquote:before {
+  content: "\201C";
+  font: 3em 'Georgia';
+  float: left;
+  margin: -5px 5px 0px -20px;
+}
+blockquote:after {
+  content: "\201D";
+  font: 3em 'Georgia';
+  float: right;
+  margin: -20px -15px 0 5px;
+}
+.scrollbar{
+	float: left;
+	height: 130px;
+	padding:0 5px;
+	overflow-y: scroll;
+	margin:-15px auto 5px;
+	letter-spacing:0.5px;
+}
+	.scrollbar::-webkit-scrollbar-track{
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+		background-color: white;
+	}
+
+	.scrollbar::-webkit-scrollbar{
+		width: 5px;
+		background-color: #ccc;
+	}
+
+	.scrollbar::-webkit-scrollbar-thumb{
+		background-color: gray;
+		border: 2px solid gray;
+	}
+
+/* 2-3. (un)like */
+#section3 h4 {
+	margin:0 0 10px;
+	font-weight:bold;
+}
+#section3 h4 a {float:right; margin-top:5px;}
+#section3 h4 a, #section3 blockquote {font-size:14px;}
+
+/* ------------------------------------------------------------ */
+/* section 4 */
+/* ------------------------------------------------------------ */
+#section4 .drop-box{
+	right:20px;
+	top:5px;
+	padding:0;
+}
+#section4 a:hover {text-decoration:underline;}
+#section4 .glyphicon {
+	text-align:left; 
+	padding-right:10px;
+}
+#section4 .img-5st, #section4 .img-4st, #section4 .img-3st, #section4 .img-2st, #section4 .img-1st
+{width:25%;}
+#section4 .p-header {font-weight:bold; font-size:1.2em;}
+#section4 .p-align {text-align:right;}
+#section4 .caution {font-size:0.8em; color:gray;}
+#section4 .caution a, #section4 .p-align a {color:#008eba;}
+#section4 .panel-heading a:hover {color:YellowGreen;}
+#section4 .panel-body {line-height:180%;}
+#section4 .more a {
+	color:YellowGreen;
+	text-indent:2em;
+	font-size:1.5em;	
+}
+
+/* ------------------------------------------------------------ */
+/* RecentlyViewed */
+/* ------------------------------------------------------------ */
+.empbox {
+	background:#f5f5f5;
+	padding:50px 0;
+}
+.RecentlyViewed .carousel-inner {
+	width:80%;
+	margin:0 auto;
+}
+
+/* item */
+.RecentlyViewed .item{margin:0 5px;}
+	
+.RecentlyViewed .thumbnail {
+	height:250px;
+	margin:0 10px;
+}
+
+img[alt="Slide11"]{
+	width:60%;
+	margin:10px 10px 0;}
+	
+.RecentlyViewed .thumbnail .caption {
+	height:100px;
+	margin:0 10px;	
+	font:1em 'Slabo 27px','hanna', serif;
+	color:DimGray;
+}
+.RecentlyViewed .thumbnail .caption span{font:bold 1.5em 'Slabo 27px';}
+.RecentlyViewed .carousel-control.left, .carousel-control.right {background-image:none !important;}
+.RecentlyViewed .carousel-control {
+	color:YellowGreen;
+	padding: 4px 0;
+	width:26px;
+	top:8px;	
+	left:auto;
+	bottom:auto;
+	opacity:1;
+	text-shadow:none;
+}
+.RecentlyViewed .carousel-control.right {right:10px;}
+.RecentlyViewed .carousel-control.left {right: 40px;}
+.RecentlyViewed .carousel-indicators {bottom:-40px;}
+.RecentlyViewed .carousel-indicators li {
+	width:10px;
+	height:10px;
+	background:#ccc;
+	border:1px solid #ccc;
+}
+.RecentlyViewed .carousel-indicators .active {
+	width:12px;
+	height:12px;
+	background:yellowgreen;
+	border-color:yellowgreen;
+}
+.RecentlyViewed h2{
+	color:black;
+	text-indent:5.5em;
+}

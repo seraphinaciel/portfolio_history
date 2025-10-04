@@ -1,0 +1,565 @@
+/* ------------------------------------------------------------------- */
+/* nav-menu.css */
+/* ------------------------------------------------------------------- */
+/*.o-container{border:1px solid blue;}*/
+
+@media all and (min-width:1200px){
+	.c-menu--slide-left{width:18%;}
+
+}
+@media all and (max-width:1199px){
+.c-buttons{margin-left:0px;}
+.o-container{padding:0 48px;}
+.c-menu--slide-left{
+	width:30%;
+	margin-left:-14.5px;
+}
+.c-menu__close {margin-left:9px; margin-bottom:19px; }
+#cssmenu > ul > li > a, #cssmenu ul ul li a {font-size:1.3em;}
+#cssmenu ul li ul li ul li a {font-size:1em;}
+
+#logo{
+width:200px;
+margin-left:30px;
+}
+.navSearch {margin:22px 0;}
+#nav-btn {margin:-10px 0 0;}
+#menu .navinput {width:70%;}
+#nav-btn {
+	margin:10px 0;
+	text-align:left;
+}
+#menu .nav button {
+	padding:10px;
+	margin:9px 10px 0 0;
+}
+
+}
+
+@media all and (max-width:991px){
+.o-container{padding:0 24px}
+.o-container, .c-menu {margin-top:-12.5px;}
+.c-buttons {margin-left:20px;}
+.c-menu__close {margin:0 0 9px 5px;}
+.c-menu--slide-left{width:35%;}
+
+#cssmenu > ul > li > a, #cssmenu ul ul li a {font-size:1.3em;}
+#cssmenu ul li ul li ul li a {font-size:1em;}
+
+#logo {
+	width:160px;
+	height:55px;
+	margin-left:20px;
+}
+#logo h1 {margin-top:10px;}
+.navSearch{
+	width:46%;
+	margin:10px 0;
+}
+#nav-btn {margin:-10px 0 0;}
+#menu .navinput {width:65%;}
+#nav-btn {
+	margin:10px 0;
+	text-align:left;
+}
+#menu .nav button{
+	padding:5px;
+	margin:0 5px;
+}
+	
+}
+
+@media all and (max-width:767px){
+.c-menu--slide-left{
+	width:250px; 
+	top:25px;
+}
+.c-menu__close {margin:0 0 8px;}
+.c-buttons {
+	position:absolute;
+	margin-left:15px;
+	margin-top:5px;
+}
+.glyphicon-menu-hamburger, .c-menu__close {
+	width:30px; height:30px;
+	font-size:1.5em;
+	text-align:center;
+}
+.c-menu__close p {
+	font-size:1.3em;
+	margin-top:-2px;
+}
+
+#cssmenu > ul > li > a, #cssmenu ul ul li a {font-size:1.2em;}
+#cssmenu ul li ul li ul li a {font-size:1em;}
+#logo {
+	width:140px;
+	height:50px;
+	margin-left:25px;
+}
+#logo h1 {margin-top:5px;}
+#menu .f-sear {visibility:hidden;} 
+#menu .sB {width:35px; margin-left:10px;}
+.navSearch {width:100%; text-align:left;}
+#menu .navinput {width:85%;}
+#nav-btn {
+	margin:10px 0;
+	text-align:left;
+}
+#menu .nav button{margin:0 20px;}
+
+}
+
+
+/* =================================================================== */
+/* media-md-max-width : 1199px */
+/* =================================================================== */
+@media all and (max-width:1199px){
+
+/* ------------------------------------------------------------------- */
+/* basic.css */
+/* ------------------------------------------------------------------- */
+body{
+	/* background: #ded000; */
+	font-size:1.3em;
+}
+.p-height {height:75px;}	
+.p-th-height{
+	height:55px;
+	overflow:hidden;
+}	
+
+/* ------------------------------------------------------------------- */
+/* main.css */
+/* ------------------------------------------------------------------- */
+/* 1. 광고 */
+#adSelling #ad-indicators
+	, #adSelling #ad-btnLR {visibility:hidden;}
+#adSelling .carousel-indicators {margin-bottom:-20px;}
+#adSelling .carousel-control {
+	font-size:1em;
+	width:40px;
+}
+#adSelling .fa {margin-top:150%;}
+	
+/* 2. 베스트 */
+.thumbnail #wishB{visibility:hidden;}
+.myItem figure:hover p{visibility:hidden;}
+.myItem .thumbnail:hover {border:1px solid #ccc;}
+.myItem .thumbnail .caption {width:150px;}
+.myItem .thumbnail .caption span {	
+	font-size:1.5em; 
+	text-decoration:underline;	
+}
+	/* thumbnail: +더보기 */
+	.t-More .btn {font-size:2em;}
+	.t-More .glyphicon {padding:0 25%;}
+	.t-More #more {visibility:hidden;}
+		.t-More:hover {background: yellowgreen;}
+
+/* hover :: caption */
+.myItem figure {
+	margin: 0;
+	position: relative;
+	overflow: hidden;
+}
+.myItem figure figcaption {
+	display: block;
+	position: absolute;
+	bottom: 0;    
+	z-index: 5;
+	padding-left:60px;
+	background: yellowgreen;
+	width: 300%;
+	height:50%;
+	margin-left:-18%;
+
+	transform: translateY(100%);
+		-webkit-transform: translateY(100%);
+		-moz-transform: translateY(100%);
+		-ms-transform: translateY(100%);
+		-o-transform: translateY(100%);
+
+	transition: all 0.5s;
+		-webkit-transition: all 0.5s;
+		-moz-transition: all 0.5s;
+		-ms-transition: all 0.5s;
+		-o-transition: all 0.5s;
+}
+.myItem figure figcaption button {margin:50px 0;}
+.myItem figure:hover figcaption
+, .myItem figure.hover figcaption {
+	transform: translateX(0);
+		-webkit-transform: translateX(0);
+		-moz-transform: translateX(0);
+		-ms-transform: translateX(0);
+		-o-transform: translateX(0);
+}
+		
+/* 3. event */
+/* 1.daily deal */
+.eventbox #ribbon {
+	width:110px; 
+	height:110px; 
+	top:29px;
+}
+.eventbox .ribbon-box .col-sm-12 {text-align:center;}
+.eventbox .ribbon-box #eventProduct {width:100%;}
+.eventbox .ribbon-box #p {
+	font-size:.7em; 
+	width:100%;
+	padding-left:40px;
+	text-align:left;
+}	
+.eventbox .ribbon-box #p mark {
+	margin-left:-10px; 
+	margin-top:-15px;
+	font-size:1.2em;
+}	
+
+/* TIME : countdown : USA L.A. 기준*/
+#countdown {
+    height:100px;
+	margin-top:20px;
+}
+#countdown span {
+  font-size:1em;
+  margin: 0 5px;
+  padding:5px 10px;
+}
+ .counter {
+  height:70px;
+  margin-top:20px;
+}
+ 
+/* 2. weekly */
+.event .panel {font-size:2em;}	
+.event .panel-body img {width:25%;}
+.event .panel .panel-heading span{
+	font-size:1em;
+}
+.b_event .carousel-indicators {visibility:visible; top:0px; left:200px;}
+
+/* 3-2. Information */
+.b_info #p-sample {font:1.6em 'Nanum Pen Script';}
+
+/* ------------------------------------------------ */
+/* category.css */
+/* ------------------------------------------------ */
+.c-header-content h1, .c-header-content h3{margin-top:15px;}
+.box img{width:80%;}
+.box div{margin:5px;}
+.box p{width:150px;}
+
+/* ------------------------------------------------------------------- */
+/* detail.css */
+/* ------------------------------------------------------------------- */
+/* 1. 상품소개 */
+.pd-name h3{font-size:1.4em;}
+.img-stars{width:50%;}
+
+/* 2. 상세내역 */
+.affix {width: 83%;}
+
+/* section */
+#section1 .carousel-inner .img-stars{width:50%;}
+#section1 .panel-body .thumbnail {height:200px;}
+#section3 .glystar {
+	position:absolute; 
+	top:20px; 
+	z-index:3;
+}
+#section3 .glystar p {
+	text-align:right; 
+	padding-right:40px;
+}
+#section3 .glystar span {
+	color:DimGray;
+	margin:6px auto; 
+}
+#section3 .glystar .glyphicon-star-empty {color:rgba(0,0,0,0);}
+#section4 .img-5st
+	, #section4 .img-4st
+	, #section4 .img-3st
+	, #section4 .img-2st
+	, #section4 .img-1st {width:35%;}
+}
+
+/* =================================================================== */
+/* media-sm-max-width : 991px */
+/* =================================================================== */
+@media all and (max-width:991px){
+
+body{
+	/* background:#00baae;  */
+	padding-top:55px;}
+.p-height {height:78px;}
+
+/* ------------------------------------------------------------------- */
+/* main.css */
+/* ------------------------------------------------------------------- */
+/* 2. 베스트 */
+.thumbnail #wishB {visibility:visible;}
+.myItem figure:hover p {visibility:visible;}
+.myItem figure figcaption {visibility:hidden;}
+.myItem .thumbnail:hover {border:2px solid yellowgreen;}
+.myItem .thumbnail .caption {width:80%; padding:0;}
+.myItem .thumbnail .caption span {	
+	font-size:1.5em; 
+	text-decoration:underline;	
+}
+	/* thumbnail: +더보기 */
+	.t-More .btn {font-size:2em;}
+	.t-More .glyphicon {padding:0 25%;}
+	.t-More #more {visibility:hidden;}
+		.t-More:hover {background: yellowgreen;}
+		
+/* 3-1. event */
+/* 1.daily deal */
+.eventbox #ribbon {width:110px; height:110px;}
+.eventbox .ribbon-box #eventProduct {width:100%;}
+.eventbox .ribbon-box .col-sm-12 {text-align:center;}
+.eventbox .ribbon-box #p {
+	font-size:.9em; 
+	width:90%;
+	padding-left:20px;
+	text-align:left;
+}	
+.eventbox .ribbon-box #p mark {
+	margin-left:10px; 
+	margin-top:-15px;
+	font-size:1.2em;
+}	
+/* TIME : countdown : USA L.A. 기준*/
+#countdown span {font-size:1em;}
+ 
+/* 2. weekly */
+.eventbox .panel {font-size:2em;}	
+.eventbox .panel-body img {width:25%;}
+.eventbox .event .panel .panel-heading span {font-size:1em;}
+.eventbox .b_event .carousel-indicators {visibility:visible; top:0px; left:200px;}
+
+/* 3-2. information */
+.b_info .sample {
+	padding:0 5px;
+	margin:0 10px;
+}
+.b_info #p-sample {
+	font:1.5em 'Nanum Pen Script';
+	text-indent:10px;
+}
+.b_info .mySample .thumbnail {margin:0 5px;}
+.mySample .carousel-inner {margin:10px auto;}
+
+/* ------------------------------------------------------------------- */
+/* category.css */
+/* ------------------------------------------------------------------- */
+.product-box .product {padding:0;}
+.product-box .col-md-3, .product-box .col-sm-3 {padding:10px;}
+.box img{width:100%;}
+.box div{margin:10px;}
+.box p{width:150px;}
+
+/* ------------------------------------------------------------------- */
+/* detail.css */
+/* ------------------------------------------------------------------- */
+.affix {top:55px;}
+#section4 .img-5st
+	, #section4 .img-4st
+	, #section4 .img-3st
+	, #section4 .img-2st
+	, #section4 .img-1st {width:35%;}
+#section1 img[alt="pill"] {width:40%;}
+
+}
+/* =================================================================== */
+/* media-xs-max-width : 767px */
+/* =================================================================== */
+@media all and (max-width:767px){
+
+body{
+	max-width:418px;/* background:#69ba00;  */
+	padding-top:50px;
+}
+/* ------------------------------------------------------------------- */
+/* main.css */
+/* ------------------------------------------------------------------- */
+.thumbnail #wishB, .myItem figure:hover p
+	, .t-More #more {visibility:hidden;}
+#adSelling #ad-indicators, #adSelling #ad-btnLR {visibility:visible;}
+#adSelling .carousel-indicators {margin-bottom:-30px;}
+#adSelling .carousel-control {width:20px;}
+#adSelling .fa {
+	margin-top:150%;
+	font-size:2em;
+}
+
+/* 2. 베스트 */
+.myItem .thumbnail {
+	height:220px;
+	margin:0;
+}
+.myItem .thumbnail:hover {border:2px solid yellowgreen;}
+.myItem figure:hover p {visibility:visible;}
+.myItem figure figcaption {visibility:hidden;}
+.myItem .thumbnail .caption {width:100%; padding:0 5px;}
+.myItem .thumbnail .caption span {	
+	font-size:1.5em; 
+	text-decoration:underline;	
+}
+.tab-content {height:auto;}
+.myItem {height:460px;}
+img[alt="Slide11"] {
+	width:100px; 
+	margin:5px auto;
+}
+.p-height {height:50px;}
+	/* thumbnail: +더보기 */
+	.t-More .btn {
+		margin:35% 15%;
+		font-size:2em;
+	}
+		.t-More:hover {background: yellowgreen;}
+.myItem .carousel-indicators {bottom:-30px;}
+		
+/* 3. event */
+
+/* 1.daily deal */
+.eventbox #ribbon {
+	width:110px;
+	height:110px;
+}
+.eventbox .ribbon-box #eventProduct {width:100%;}
+.eventbox .ribbon-box .col-sm-12 {text-align:center;}
+.eventbox .ribbon-box #p {
+	width:100%;
+	font-size:.9em; 
+	padding-left:20px;
+	text-align:left;
+	margin:0;
+}	
+.eventbox .ribbon-box #p mark{
+	margin-left:10px;
+	font-size:1.2em;
+}	
+
+/* TIME : countdown : USA L.A. 기준*/
+#countdown span {font-size:1em;}
+
+/* 2. weekly */
+.eventbox .panel{font-size:2em;}	
+.eventbox .panel-body img {width:25%;}
+.event .panel .panel-heading span{font-size:1em;}
+
+/* 3-1. event */
+.event .b_event, .info .b_info {padding:15px;}
+.info .b_info .row {padding:0 10px;}
+.b_event .carousel-indicators {
+	width:30%;
+	margin-left:10px;
+	visibility:visible; 
+	text-align:center;
+}
+.b_event .brands .thumbnail{width:90%;}
+
+/* 3-2. Information */
+.b_info #p-sample{
+	font-size:1.5em; 
+	text-indent:10px;
+}
+.b_info .mySample {
+	margin:0; 
+	padding:0 5px;
+}
+.mySample .carousel-inner {margin:10px auto;}
+
+/* ------------------------------------------------------------------- */
+/* category */
+/* ------------------------------------------------------------------- */
+.product-box .product {padding:0;}
+.product-box .product .p-height {height:70px;}
+.product-box .col-md-3, .product-box .col-sm-3 {padding:10px;}
+.box {height:250px;}
+.box img {width:80%;}
+.box div {margin:10px;}
+.box p {width:90%;}
+
+/* ------------------------------------------------------------------- */
+/* detail.css */
+/* ------------------------------------------------------------------- */
+.product-box, .pd-image-box, .pd-image-box img {margin:0; padding:0;}
+.pd-image-box, .pd-name-box {height:auto;}
+.pd-image-box {
+	text-align:center;
+	border-bottom:1px solid #ccc;
+}
+.pd-image-box img {width:50%;}
+.pd-name {padding:0 10px;} 
+.pd-price-box .container-fluid {padding-left:0; padding-right:10px;}
+.pd-price-box .table {
+	margin:0px; 
+	width:100%; 
+	padding-left:10px;
+}
+
+.c-navbar {visibility:hidden;}
+/* .affix {top:50px; width:100%;} */
+#section1, #section2,#section3, #section4, #footer-Rv {padding:0; margin:0;}
+#section1 img[alt="pill"] {width:40%;}
+#section2 .panel-body, #section3 .panel-body {padding:0;}
+#section3 .panel-body .col-sm-4 {margin:5px auto;}
+#section3 .panel-body  .starbox
+	, #section3 .panel-body .unlike .row {margin:0px;}
+#section3 .glystar p {
+	padding:0px; 
+	margin-bottom:8px;
+	text-align:left;
+}
+#section3 .panel-body .unlike .row { text-align:left;}
+/* position을 다시 고정시켜줌. */
+#section3 .glystar {position:initial;}
+#section3 .glystar p {padding-left:10px;}
+#section3 .glystar span {
+	font-size:1.1em; 
+	color:YellowGreen;
+	margin:5px auto; 
+	height:15px;
+}
+#section3 .glystar .glyphicon-star-empty {color:#f5f5f5;}
+
+/* progress-bar */
+#section3 .col-xs-7 {
+	padding:0 20px; 
+	margin-top:-10px;
+}
+#section3 .progress {
+	margin:15px auto; 
+	height:20px; 
+	background:white;
+}
+#section3 .progress-bar {background:YellowGreen;}
+#section4 .img-5st
+	, #section4 .img-4st
+	, #section4 .img-3st
+	, #section4 .img-2st
+	, #section4 .img-1st {width:35%;}
+#section4 .panel-group .panel { margin:0 -15px 5px; padding:0;}	
+
+/* ------------------------------------------------------------ */
+/* RecentlyViewed */
+/* ------------------------------------------------------------ */
+.RecentlyViewed h2{text-indent:1em;}
+#footer-Rv {margin:0 -15px;}
+.RecentlyViewed .thumbnail {
+	height:auto;
+	margin:0;
+}
+.RecentlyViewed .thumbnail .caption {height:120px;}
+.RecentlyViewed .carousel-control {top:-50px;}
+}
+
+/* height */
+@media all and (min-height:1028px){
+	.b_event .item {height:auto;}
+	.b_event .item .thumbnail {width:auto; height:150px;}
+}

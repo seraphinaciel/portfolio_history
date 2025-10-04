@@ -1,0 +1,132 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* ================================================ */
+/* 1. 소개 */
+/* ================================================ */
+
+.c-header-content{
+  color: Olive;
+  margin:0 20px;
+}
+.c-header-content h1, .c-header-content h3{font-family: 'Hanna', serif;}
+.c-header-content p{
+	margin:20px 50px 50px;
+	font:1em 'Nanum Gothic', serif;
+	text-justify:inter-word;
+	word-spacing:2px;
+	line-height:180%;
+}
+.page-header{padding:0;}
+
+/* ================================================ */
+/* 2. 제품구분 */
+/* ================================================ */
+
+#popular-box .form-control{
+	font:1em 'Nanum Gothic', serif;
+	word-spacing:2px;
+	line-height:180%;
+}
+#popular-box{
+	float:right;
+	right:30px;
+	top:0px;
+	padding:0;
+}
+
+/* ================================================ */
+/* 3. 제품 */
+/* ================================================ */
+
+.product:nth-child(2), .product:nth-child(3) {margin-top:20px !important;}
+.product-box{padding:10px;}
+.product-box .col-sm-3 {padding:0 10px;}
+.box{
+	height:300px;
+	margin:10px;
+	border:1px solid #ccc;
+	border-radius:5px;
+	transition: all 0.25s ease-in;
+		-webkit-transition: all 0.25s ease-in;
+		-moz-transition: all 0.25s ease-in;
+		-ms-transition: all 0.25s ease-in;
+		-o-transition: all 0.25s ease-in;
+}
+	.box:hover{border:5px solid yellowgreen;}
+	.box a:hover{text-decoration:underline; color:gray;}	
+
+.box div{
+	margin:5px 20px; 
+	text-align:center;
+}
+.box img {
+	width:70%;
+	padding-bottom:-5px;
+	margin-bottom:5px;
+	text-decoration:none;
+}
+.box p{
+	width:190px;
+	font:1em 'Roboto Condensed','Jeju Gothic',serif;
+	margin:0 auto; 
+	color:gray;
+	text-align:left;
+	word-spacing:2px;
+	line-height:140%;
+	letter-spacing:1px;
+	border:1px solid rgba(0,0,0,0);
+}
+.box span{font:bold 1.5em 'Slabo 27px';}
+.box del {text-align:left;}
+.s-color {color:DeepPink; font-weight:bold; font-size:1.2em;}
+.img-stars{width:50%;}
+.box .s-valuation{
+	font-size:1em;
+	text-align:right;
+}
+	.box .s-valuation:hover {text-decoration:underline;}
+
+/* hover */
+	.product figure {
+		width:100%;
+		margin: 0;
+		position: relative;
+		overflow: hidden;
+	}
+	.product figure figcaption {
+		width: 100%;
+		height:50%;
+		background:rgba(204, 204, 204, .4);
+		text-align:center;
+		display: block;
+		position: absolute; top: 0;    
+		margin-left:0px;
+		transform: translateY(100%);
+			-webkit-transform: translateX(-100%);
+			-moz-transform: translateY(-100%);
+			-ms-transform: translateY(-100%);
+			-o-transform: translateY(-100%);
+		transition: all 0.5s;
+			-webkit-transition: all 0.5s;
+			-moz-transition: all 0.5s;
+			-ms-transition: all 0.5s;
+			-o-transition: all 0.5s;
+		z-index: 5;
+	}
+	.product figure figcaption .btn{margin:30% 0;}
+	.product figure:hover figcaption,
+	.product figure.hover figcaption {
+		transform: translateX(0);
+			-webkit-transform: translateX(0);
+			-moz-transform: translateX(0);
+			-ms-transform: translateX(0);
+			-o-transform: translateX(0);
+	}
+
+/* ================================================ */
+/* 4. 페이지 */
+/* ================================================ */
+	
+#pagination{text-align: center;}

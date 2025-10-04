@@ -1,0 +1,113 @@
+/* =============================================================================
+  Skills hover animation Style
+============================================================================= */
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+
+
+/* ======================================
+     skills hover animation css start
+=======================================*/
+
+.card:nth-child(1) {
+  margin-left: -3px;
+  margin-right: 1px;
+}
+
+/* card fronts and backs */
+.card__front,
+.card__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card__front,
+.card__back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+  -ms-transform:-ms-transform 0.3s;
+  -o-transform:-o-transform 0.3s;
+  -moz-transform:-moz-transform 0.3s;
+}
+
+.card__back {
+  background-color: coral;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+/* card text */
+.card__text, .card__text2 {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto 5px;
+  height: 50px;
+  color: #fff;
+  letter-spacing:-2px;
+}
+.card__text2 {
+	font-size:20px;
+	letter-spacing:-2px;
+	margin: auto 10px;
+}
+
+/* hover effect */
+.card.effect__hover:hover .card__front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  -ms-transform:rotateY(-180deg);
+  -o-transform:rotateY(-180deg);
+  -moz-transform:rotateY(-180deg);
+}
+
+.card.effect__hover:hover .card__back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+  -ms-transform:rotateY(0);
+  -o-transform:rotateY(0);
+  -moz-transform:rotateY(0);
+}
+
+/* click effect */
+.card.effect__click.flipped .card__front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  -ms-transform:rotateY(-180deg);
+  -o-transform:rotateY(-180deg);
+  -moz-transform:rotateY(-180deg);
+}
+
+.card.effect__click.flipped .card__back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+  -ms-transform:rotateY(0);
+  -o-transform:rotateY(0);
+  -moz-transform:rotateY(0);
+}
+
+/* random effect */
+.card.effect__random.flipped .card__front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  -ms-transform:rotateY(-180deg);
+  -o-transform:rotateY(-180deg);
+  -moz-transform:rotateY(-180deg);
+}
+
+.card.effect__random.flipped .card__back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+  -ms-transform:rotateY(0);
+  -o-transform:rotateY(0);
+  -moz-transform:rotateY(0);
+}

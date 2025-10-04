@@ -1,0 +1,53 @@
+/* =================================================================== */
+/* 한글 폰트 :serif */
+/* =================================================================== */
+
+/* 1. 나눔 Pen Script : 'Nanum Pen Script' */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+
+/* 2. 나눔 Brush : 'Nanum Brush Script'*/
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+
+/* 3. 나눔 명조체'Nanum Myeongjo' */
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+
+/* 4.나눔 고딕 코딩'Nanum Gothic Coding' */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+
+/* 5.나눔 고딕체'Nanum Gothic' */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+/* 6. KoPub 바탕체'KoPub Batang' */
+@import url(http://fonts.googleapis.com/earlyaccess/kopubbatang.css);
+
+/* 7. 하나체'Hanna' */
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+
+/* 8.제주고딕'Jeju Gothic' */
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+/* 9.제주한라산'Jeju Hallasan' */
+@import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+
+/* 10.제주명조'Jeju Myeongjo' */
+@import url(http://fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+
+
+/* =================================================================== */
+/* English Font */
+/* =================================================================== */
+
+/* 'Slabo 27px', serif; */
+@import url(https://fonts.googleapis.com/css?family=Slabo+27px);
+
+/* 'Roboto Condensed', sans-serif; */
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300|Overlock);
+
+/* font-family: 'Open Sans', sans-serif; */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+
+/* font-family: 'Passion One', cursive; */
+@import url(https://fonts.googleapis.com/css?family=Passion+One);
+
+/* font-family: 'News Cycle', sans-serif; */
+@import url(https://fonts.googleapis.com/css?family=News+Cycle);

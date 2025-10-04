@@ -1,0 +1,426 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* <<<<<<<<<<<<<<<<<< Common >>>>>>>>>>>>>>>>>>>>>> */
+.page-header{
+	margin:0 auto 5px; 
+	padding:0;
+}
+h2 {font-family:'Slabo 27px';}
+h3 {font-family:'Slabo 27px','Nanum Brush Script', serif;}
+
+/* ================================================ */
+/* 1. 광고 : carosel > adSelling */
+/* ================================================ */
+
+#adSelling{height:auto; margin:0; padding:0;}
+/* #adSelling .carousel {border:1px solid white;} */
+#adSelling .carousel-inner > .item > img
+	, #adSelling .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+  }
+#adSelling #ad-indicators, #adSelling #ad-btnLR{visibility:hidden;}
+
+#adSelling .carousel-control{background:0 0;}
+
+#adSelling .fa{
+	font-size:3em; 
+	color:white;
+	text-shadow:none;
+	margin-top:55%;	}
+
+/* ================================================ */
+/* 2. 베스트 : tab-selling > myItem, thumbnail */
+/* ================================================ */
+
+/* #teb-selling{width:100%;} */
+/* tab style */
+#teb-selling .nav{
+	width:90%; 
+	margin:0 auto; 
+}
+	#teb-selling .nav a{
+		font:1em 'Slabo 27px','Jeju Gothic', serif; 
+		color:gray;
+	}
+	#teb-selling .nav a:hover{
+		background:#eaf5d6; 
+		color:#78a428;
+	}
+	#teb-selling .nav .active a{color:#96cd32;}
+
+/* ------------------------------------------------ */
+/* 탭 내용 */
+/* ------------------------------------------------ */
+.tab-content{
+	/* width:100%; */
+	height:370px;
+	overflow:hidden;
+}
+.tab-pane{
+	margin-top:-2px;
+	overflow:hidden;
+}
+.myItem .carousel-inner{
+	width:90%; 
+	margin:0 auto;
+}
+
+/* item */
+.myItem{
+	width:100%;
+	height:370px; 
+	margin-top:10px;}
+
+.myItem .item{
+	width:98%;
+	margin:5px auto;	}
+	
+.myItem .thumbnail {
+	height:320px;
+	margin:0 10px;
+	margin-bottom:0;
+}
+	.myItem .thumbnail:hover{border:5px solid yellowgreen;}
+	/* .myItem .thumbnail:hover{outline:2px solid yellowgreen;} */
+	
+/* ------------------------------------------------ */
+/* item :: image, font, more, wishList */
+/* ------------------------------------------------ */
+
+img[alt="Slide11"]{
+	width:170px; 
+	height:170px;
+	margin:10px 10px 0;
+}
+.myItem .thumbnail .caption {
+	width:200px;
+	margin:0 auto;	
+	word-spacing:2px;
+	line-height:140%;
+	font:1em 'Slabo 27px','hanna', serif;
+	color:DimGray;
+}
+.myItem .thumbnail .caption span{font:bold 1.7em 'Slabo 27px';}
+
+	
+/* thumbnail: +더보기 */
+.t-More{height:320px;}
+	.t-More:hover{background:white; color:yellowgreen;}
+.t-More .btn{
+	width:70%;
+	height:48px;
+	padding:10px 0;
+	margin:120px 15% 160px;
+	font:bold 2em 'hanna';		
+	background:yellowgreen;
+	color:aliceblue;}
+		
+/* wishList: button */
+.myItem .thumbnail button:hover{background:#eaf5d6; border:1px solid #eaf5d6;}
+.myItem .thumbnail figcaption {margin-top:50px;}/* figcaption 아래로 밀어 숨기기 :: media-xs-sm-md에서 사용 */
+
+
+/* ------------------------------------------------ */
+/* carousel-control : left & right */
+/* ------------------------------------------------ */
+
+.myItem .carousel-control.left, .carousel-control.right {background-image:none !important;}
+.myItem .carousel-control {
+	top:40%;
+	color:#ccc;
+	bottom:auto;
+	position:absolute;
+	padding-top:4px;
+	width:30px;
+	height:30px;
+	text-shadow:none;
+	opacity:1;
+}
+.myItem .carousel-control.right {left:auto; right:5px;}
+.myItem .carousel-control.left {right:auto;	left:5px;}
+	.myItem .carousel-control:hover {color: yellowgreen;}
+
+/* ------------------------------------------------ */
+/* carousel-indicators */
+/* ------------------------------------------------ */
+.myItem .carousel-indicators {bottom:-40px;}
+.myItem .carousel-indicators li {
+	border-radius:0;
+	width:10px;
+	height:10px;
+	background:#ccc;
+	border:1px solid #ccc;
+}
+.myItem .carousel-indicators .active {
+	width:12px;
+	height:12px;
+	background:yellowgreen;
+	border-color:yellowgreen;
+}
+
+/* ================================================ */
+/* 3-1. event */
+/* ================================================ */
+.evin{margin:0 auto;}
+.event .b_event {padding-left:15px;}
+.info .b_info {
+	padding-left:10px;
+	padding-right:15px;
+}
+.info .b_info .row {padding:0 10px;}
+.event .b_event .carousel{padding:0 10px;}
+.b_event .item{	height:660px; }
+	
+/* ------------------------------------------------ */
+/* ribbon-box */
+/* ------------------------------------------------ */
+.eventbox{
+	width:100%;
+	height:auto;
+	/* border:1px solid white; */
+}
+.eventbox #ribbon{	
+	width:150px; 
+	height:150px; 
+	position:absolute; right:0; top:30px;
+}
+.eventbox .ribbon-box{
+	width:96%;
+	height:97%;
+	margin:10px auto 0;
+	border:5px double DeepPink;
+	font-size:1.5em;
+	color:dimgray;
+}
+.eventbox .ribbon-box #eventProduct{
+	width:80%; 
+	margin:15px auto 0;
+}
+.eventbox .ribbon-box #p{
+	margin-top:20px;
+	padding-left:40px;
+	word-spacing:2px;
+	line-height:140%;
+}	
+/* ------------------------------------------------ */
+/* TIME : countdown : USA L.A. 기준*/
+/* ------------------------------------------------ */
+.counter {
+  height:auto;
+  text-align: center;
+  margin-top:35px;
+}
+#countdown {
+    height:75px;
+	margin-top:0px;
+}
+#countdown span {
+  color: black;
+  font-size: 30px;
+  margin: 0 10px;
+  padding:15px 10px;
+  border:1px solid #ccc;
+  border-radius:10px;
+  text-align: center;
+}
+  
+/* 강조, 유의사항 */
+mark{
+	position:relative; left:-25px;
+	font-size:1.5em; 
+	color:DeepPink;
+	border-radius:10px;
+	background:#ffe0f1;
+}
+.font{
+	width:96%; 
+	margin:25px auto; 
+	text-indent:-10px; 
+	padding-left:1.5em;}
+
+/* ------------------------------------------------ */
+/* 2. weekly */
+/* ------------------------------------------------ */
+
+.event .panel{
+	font:2em 'Nanum Pen Script';
+	text-align:center;
+}	
+.event .panel .panel-heading span{
+	text-decoration:underline; 
+	color:DeepPink; 
+	font-size:1.5em;
+}
+	
+/* ------------------------------------------------ */
+/* thumbnail */
+/* ------------------------------------------------ */
+.b_event .item .thumbnail{
+	margin:10px auto; 
+	padding:0;
+	width:99%;
+	border:1px solid gray;
+}
+	.b_event .thumbnail:hover, .eventbox .ribbon-box:hover {box-shadow:3px 4px 1px #4D4D4D;}
+
+/* ------------------------------------------------ */
+/* event-btn : carousel-control */
+/* ------------------------------------------------ */
+.event-btn .carousel-control {
+	width:20px;
+	color:#ccc;
+	top:-28px; left:auto; bottom:auto;
+	opacity:1;
+	text-shadow:none;
+	background:0 0;
+}
+	.event-btn .carousel-control:hover { color:#7ba428; }
+.event-btn .carousel-control.right { right:10px;	}
+.event-btn .carousel-control.left { right:35px; }
+
+/* ------------------------------------------------ */
+/* b_event : b-indicators */
+/* ------------------------------------------------ */
+.b_event .carousel-indicators {
+	width:100%;
+	height:25px;	
+	top:0px; left:150px;
+	visibility:hidden;
+}
+.b_event .carousel-indicators li {
+	border-radius:0;
+	width:10px;
+	height:10px;
+	background:#ccc;
+	border:1px solid #ccc;
+}
+.b_event .carousel-indicators .active {
+	width:12px;
+	height:12px;
+	background:yellowgreen;
+	border-color:yellowgreen;
+}
+
+/* ================================================ */
+/* 3-2. Information */
+/* ================================================ */
+
+/* .info{margin-left:20px;} */
+.info li {list-style-type:square;}
+
+.b_info .row a{color:gray;}
+	.b_info .row a:hover{text-decoration:underline;}
+
+.b_info .sample{
+	border:2px solid #ccc;
+	border-radius:20px;
+	padding:30px 10px;
+	margin:30px 30px;
+}
+	.b_info .sample:hover {box-shadow:6px 8px 1px gray;}
+.b_info #p-sample{
+	color:DeepPink;
+	text-decoration:underline;
+	font:2em 'Nanum Pen Script';
+}
+.b_info .font{
+	margin:0 auto;
+	color:#38592f;
+}
+.b_info .leaf{
+	height:100px;
+	background:url("img/leaf.png") no-repeat center center;
+	background-size:contain;
+}
+
+.mySample .carousel-inner{margin:20px auto;}
+
+/* ------------------------------------------------ */
+/* SNS Icon */
+/* ------------------------------------------------ */
+
+.component {text-align: right;}
+.icon {
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  margin: 4px;
+  width: 56px;
+  height: 56px;
+  font-size: 0;
+  text-indent: -9999px;
+}
+.icon-cube {
+  position: relative;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  overflow: visible;
+}
+.icon-cube::before,
+.icon-cube::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/icons.png");
+  background-image: url("../img/icons.svg"), none;
+  background-size:cover;
+  content: "";
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+}
+.icon-cube::before {
+  z-index: 2;
+  background-color: #ccc;
+}
+.icon-cube::after {
+  z-index: 1;
+  opacity: 0;
+  -webkit-transform: translateY(48px) rotateX(-90deg);
+          transform: translateY(48px) rotateX(-90deg);
+}
+	.icon-cube:hover::before {
+	  opacity: 0;
+	  -webkit-transform: translateY(-48px) rotateX(90deg);
+			  transform: translateY(-48px) rotateX(90deg);
+	}
+	.icon-cube:hover::after {
+	  opacity: 1;
+	  -webkit-transform: rotateX(0);
+			  transform: rotateX(0);
+	}
+
+/* facebook :: width만큼 이동ㅋㅋ*/ 
+.icon-cube.facebook::before,
+.icon-cube.facebook::after {background-position: 0 0;}
+.icon-cube.facebook::after {background-color: #3b5998;}
+
+/* twitter */
+.icon-cube.twitter::before,
+.icon-cube.twitter::after {background-position: -56px 0;}
+.icon-cube.twitter::after {background-color: #4099ff;}
+
+/* google plus */
+.icon-cube.googleplus::before,
+.icon-cube.googleplus::after {background-position: -112px 0;}
+.icon-cube.googleplus::after {background-color: #d34836;}
+
+/* instagram */
+.icon-cube.instagram::before,
+.icon-cube.instagram::after {background-position: -168px 0;}
+.icon-cube.instagram::after {background-color:Sienna;}
+
+/*  youtube */
+.icon-cube.youtube::before,
+.icon-cube.youtube::after {background-position: -224px 0;}
+.icon-cube.youtube::after {background-color: red;}
+
+/* pinterest */
+.icon-cube.pinterest::before,
+.icon-cube.pinterest::after {background-position: -278px 0;}
+.icon-cube.pinterest::after {background-color: MidnightBlue;}
+

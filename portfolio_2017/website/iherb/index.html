@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  
+    <meta charset="utf-8" />
+    <meta http-equiv="default-style" content="main"/>
+	<meta name="author" content="Sera Lee"/>
+	<meta name="description" content="iherb main page"/>
+	<meta name="generator" content="Notepad++ v6.8.3"/>
+	<meta name="keyword" content="html, css, javascript, php"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+	<title>Welcome to I-Herb</title>
+    
+	<!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- bootstrap event carousel -->
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"/>
+
+	<!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet" title="main"/>
+    <link href="css/webfont.css" rel="stylesheet"/>
+    <link href="css/basic.css" rel="stylesheet"/>
+    <link href="css/nav-menu.css" rel="stylesheet"/>
+    <link href="css/media-xs-sm-md.css" rel="stylesheet"/>
+	
+  </head>
+  <body>
+  
+<!-- navigation -->
+ <nav class="navbar navbar-default navbar-fixed-top" id="menu">
+  <div class="container-fluid">
+    <div class="navbar-header">	
+	
+		<div id="o-wrapper" class="o-wrapper">
+			<div class="o-content">
+			  <div class="o-container">      
+				<div class="c-buttons">
+				  <button id="c-button--slide-left" class="glyphicon glyphicon-menu-hamburger"></button>
+				</div>      
+			  </div>
+			</div>
+		</div>	
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>                        
+		</button>		
+		<a href="index.html"><div id="logo"><h1>.</h1></div></a>    
+    </div>
+	
+    <div class="collapse navbar-collapse" id="myNavbar">
+	   <ul class="col-lg-8 col-sm-6 navSearch">
+	    <li>
+			<input class="form-control navinput" type="text"/>
+			<button type="button" class="btn btn-default sB"><span class="glyphicon glyphicon-search"></span><span class="f-sear"> Search</span></button>
+		</li>
+	   </ul>
+	  <ul id="nav-btn" class="nav navbar-nav navbar-right">
+		<li><button class="btn glyphicon glyphicon-log-in"  id="m-log"> Login</button></li>
+        <li><button class="btn glyphicon glyphicon-user"  id="m-sign"> Sign Up</button></li>
+	  </ul>
+	  
+    </div>
+  </div>
+</nav>
+
+  <!-- Modal :: log-in -->
+  <div class="modal fade" id="modal-log" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-leaf"></span> Login</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="email"><span class="glyphicon glyphicon-user"></span> 이메일주소</label>
+              <input type="email" class="form-control" placeholder="Enter email" required></input>
+            </div>
+            <div class="form-group">
+              <label for="password"><span class="glyphicon glyphicon-lock"></span> 비밀번호</label>
+              <input type="text" class="form-control" placeholder="Enter password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="8~16자, 영문 대 소문자, 숫자를 사용하세요." required></input>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>비밀번호 저장</input></label>
+            </div>
+              <button type="submit" class="btn btn_success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <p>아직 회원이 아니세요? <a href="#">회원가입</a></p>
+          <p>비밀번호를 잊어버렸다면? <a href="#">비밀번호찾기</a></p>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+
+  <!-- Modal :: sign up -->
+  <div class="modal fade" id="modal-sign" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-leaf"></span> 회원가입</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="email"><span class="glyphicon glyphicon-ok"></span> 이메일주소</label>
+              <input type="email" class="form-control" placeholder="Enter email" required></input>
+            </div>
+            <div class="form-group">
+              <label for="overlap"><span class="glyphicon glyphicon-ok"></span> 이메일주소 재확인</label>
+              <input type="email" class="form-control" placeholder="Enter email" required></input>
+            </div>
+            <div class="form-group">
+              <label for="password"><span class="glyphicon glyphicon-ok"></span> 비밀번호</label>
+              <input type="text" class="form-control" placeholder="Enter password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="8~16자, 영문 대 소문자, 숫자를 사용하세요." required></input>
+            </div>
+            <div class="form-group">
+              <label for="password"><span class="glyphicon glyphicon-ok"></span> 비밀번호 재확인</label>
+              <input type="text" class="form-control" placeholder="Enter password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="8~16자, 영문 대 소문자, 숫자를 사용하세요." required></input>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="optradio" checked>네, 기획상품, 할인, 신규제품등 관련정보를 보내주세요.</input> </label>
+              <label><input type="radio" name="optradio">아니요, 내 주문건에 관한 정보를 보내주세요</input></label>
+            </div>
+			<button type="submit" class="btn btn_success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+			<button type="submit" class="btn btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+<!-- 본문 -->
+<div class="container-fluid">
+  <div class="row">
+
+	<!-- menu :: left-side -->
+	<div class="col-lg-2 col-sm-1">
+	  <div class="container" id="left_side">		 
+		  <nav id="c-menu--slide-left" class="c-menu c-menu--slide-left col-sm-1">
+			<button class="c-menu__close"><p>X</p></button>
+			<div id="cssmenu" class="col-sm-11">
+				<ul>
+				  <li><a href='#'><span>신상품</span></a></li>
+				  
+				  <!--suppliments-->
+				  <li class='active has-sub'><a href='#'><span style="color:red;">건강보조식품(click)</span></a>
+					<ul>
+					  <li class='has-sub'><a href='#'><span style="color:red;">혈압/혈당관리(click)</span></a>
+						<ul>
+						  <li><a href="sub/list/cCal01.html"><span style="color:red;">칼슘(click)</span></a></li>
+						  <li><a href='#'><span>칼륨</span></a></li>
+						  <li><a href='#'><span>마그네슘</span></a></li>
+						  <li><a href='#'><span>오메가</span></a></li>
+						  <li><a href='#'><span>미네랄</span></a></li>
+						  <li><a href='#'><span>유산균</span></a></li>
+						  <li><a href='#'><span>항산화</span></a></li>
+						  <li><a href='#'><span>단백질</span></a></li>
+						  <li class='last'><a href="#"><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li class='has-sub'><a href='#'><span>콜레스테롤</span></a>
+						<ul>
+						  <li><a href='#'><span>코엔자임</span></a></li>
+						  <li><a href='#'><span>글루코만난</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					</ul>
+					<ul>
+					  <li class='has-sub'><a href='#'><span>면역 지원</span></a>
+						<ul>
+						  <li><a href='#'><span>멀티비타민</span></a></li>
+						  <li><a href='#'><span>아연</span></a></li>
+						  <li><a href='#'><span>비타민C</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li class='has-sub'><a href='#'><span>관절</span></a>
+						<ul>
+						  <li><a href='#'><span>글루코사민</span></a></li>
+						  <li><a href='#'><span>글루코사민+콘드로이틴</span></a></li>
+						  <li><a href='#'><span>뼈 포뮬라</span></a></li>
+						  <li><a href='#'><span>관절염</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>                       
+						</ul>
+					  </li>
+					</ul>
+					<ul>
+					  <li class='has-sub'><a href='#'><span>스트레스</span></a>
+						<ul>
+						  <li><a href='#'><span>5 HTP</span></a></li>
+						   <li><a href='#'><span>트립토판</span></a></li>
+						  <li><a href='#'><span>테아닌</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li class='has-sub'><a href='#'><span>여성 건강</span></a>
+						<ul>
+						  <li><a href='#'><span>여성용 포뮬라</span></a></li>
+						   <li><a href='#'><span>생리전 증후군</span></a></li>
+						  <li><a href='#'><span>폐경기</span></a></li>
+						   <li><a href='#'><span>비타민제 - 여자</span></a></li>
+						  <li><a href='#'><span>비타민제 - 임산부</span></a></li>
+						  <li><a href='#'><span>달맞이꽃 오일</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li><a href='sub/list/cCalMore.html'><span style="color:red">+ 더보기 (click)</span></a></li>
+					</ul>
+				  </li>
+				  
+				  <!--bath-->
+				   <li class='active has-sub'><a href='#'><span>목욕용품</span></a>
+					<ul>
+					  <li class='has-sub'><a href='#'><span>바디제품</span></a>
+						<ul>
+						  <li><a href='#'><span>바디스크럽</span></a></li>
+						  <li><a href='#'><span>바디워시, 샤워젤</span></a></li>
+						  <li><a href='#'><span>비누</span></a></li>
+						  <li><a href='#'><span>핸드/바디 로션</span></a></li>
+						  <li><a href='#'><span>샴푸/린스</span></a></li>
+						  <li><a href='#'><span>치약</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li class='has-sub'><a href='#'><span>바디 관리</span></a>
+						<ul>
+						  <li><a href='#'><span>데오드란트</span></a></li>
+						  <li><a href='#'><span>구강청결제</span></a></li>
+						  <li><a href='#'><span>손 세정제</span></a></li>
+						  <li><a href='#'><span>왁스 스트립, 제모제</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li class='has-sub'><a href='#'><span>남성용 관리제품</span></a>
+						<ul>
+						  <li><a href='#'><span>면도용 제품</span></a></li>
+						  <li><a href='#'><span>셰어 버터</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li class='has-sub'><a href='#'><span>자외선 차단/보호제</span></a>
+						<ul>
+						  <li><a href='#'><span>썬스크린</span></a></li>
+						  <li><a href='#'><span>셀프 태닝 로션</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li><a href='#'><span>선물세트, 여행용 세면도구</span></a></li>
+					  <li><a href='#'><span>+ 더보기</span></a></li>
+					</ul>
+				  </li>
+				  
+				  <!--beauty-->				  
+				   <li class='active has-sub'><a href='#'><span>미용제품</span></a>
+					<ul>
+					  <li class='has-sub'><a href='#'><span>스킨케어</span></a>
+						<ul>
+						  <li><a href='#'><span>스킨/로션</span></a></li>
+						  <li><a href='#'><span>에센스/크림</span></a></li>
+						  <li><a href='#'><span>아이케어/립</span></a></li>
+						  <li><a href='#'><span>팩/마스크</span></a></li>
+						  <li><a href='#'><span>선케어</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li class='has-sub'><a href='#'><span>피부고민별</span></a>
+						<ul>
+						  <li><a href='#'><span>트러블/여드름</span></a></li>
+						  <li><a href='#'><span>민감</span></a></li>
+						  <li><a href='#'><span>건성</span></a></li>
+						  <li><a href='#'><span>지성</span></a></li>
+						  <li><a href='#'><span>주름</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li class='has-sub'><a href='#'><span>원료별</span></a>
+						<ul>
+						  <li><a href='#'><span>알파하이드록시산</span></a></li>
+						  <li><a href='#'><span>알파 리포산 크림</span></a></li>
+						  <li><a href='#'><span>아젤라산</span></a></li>
+						  <li><a href='#'><span>글리콜릭산</span></a></li>
+						  <li><a href='#'><span>그린티</span></a></li>
+						  <li><a href='#'><span>히알루론산</span></a></li>
+						  <li><a href='#'><span>CoQ10</span></a></li>
+						  <li><a href='#'><span>레티놀</span></a></li>
+						  <li><a href='#'><span>셰어 버터</span></a></li>
+						  <li><a href='#'><span>비타민 E</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li class='has-sub'><a href='#'><span>남성용</span></a>
+						<ul>     
+						  <li><a href='#'><span>스킨/로션</span></a></li>
+						  <li><a href='#'><span>에센스/크림</span></a></li>
+						  <li><a href='#'><span>팩/마스크</span></a></li>
+						  <li><a href='#'><span>선케어/비비</span></a></li>
+						  <li><a href='#'><span>쉐이빙/클렌징</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li class='has-sub'><a href='#'><span>메이크업</span></a></li>
+					  <li class='has-sub'><a href='#'><span>클렌징</span></a></li>
+					  <li class='has-sub'><a href='#'><span>미용소품</span></a></li>
+					  
+					  <li><a href='#'><span>+ 더보기</span></a></li>
+					</ul>
+				  </li>
+
+				  <!--baby-->
+				   <li class='active has-sub'><a href='#'><span>아기용품</span></a>
+					<ul>
+					  <li class='has-sub'><a href='#'><span>기저귀/물티슈</span></a></li>
+					  <li class='has-sub'><a href='#'><span></span></a>
+						<ul>
+						  <li><a href='#'><span>분유/이유식</span></a></li>
+						  <li><a href='#'><span>분유</span></a></li>
+						  <li><a href='#'><span>유기농/산양분유</span></a></li>
+						  <li><a href='#'><span>특수분유</span></a></li>
+						  <li><a href='#'><span>이유식</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li class='has-sub'><a href='#'><span>수유/이유용품/위생용품</span></a>
+						<ul>
+						  <li><a href='#'><span>수유용품</span></a></li>
+						  <li><a href='#'><span>이유용품</span></a></li>
+						  <li><a href='#'><span>세정/소독용품</span></a></li>
+						  <li><a href='#'><span>유아전용세제</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li class='has-sub'><a href='#'><span>목욕/스킨케어</span></a>
+						<ul>
+						  <li><a href='#'><span>생활/위생용품</span></a></li>
+						  <li><a href='#'><span>목욕용품</span></a></li>
+						  <li><a href='#'><span>스킨케어</span></a></li>
+						  <li><a href='#'><span>구강용품</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>	     
+					  <li class='has-sub'><a href='#'><span>완구/교구</span></a>
+						<ul>
+						  <li><a href='#'><span>영유아완구</span></a></li>
+						  <li><a href='#'><span>로봇작동완구인형</span></a></li>
+						  <li><a href='#'><span>대형완구</span></a></li>
+						  <li><a href='#'><span>퍼즐블록</span></a></li>
+						  <li><a href='#'><span>스포츠</span></a></li>
+						  <li><a href='#'><span>학습완구</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li class='has-sub'><a href='#'><span>잡화</span></a>
+						<ul>
+						  <li><a href='#'><span>악세사리</span></a></li>
+						  <li><a href='#'><span>신발/가방/모자</span></a></li>
+						  <li><a href='#'><span>배변훈련</span></a></li>
+						  <li><a href='#'><span>컵</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li class='has-sub'><a href='#'><span>유아동식품</span></a>
+						<ul>
+						  <li><a href='#'><span>임부/산모식품</span></a></li>
+						  <li><a href='#'><span>이유식</span></a></li>
+						  <li><a href='#'><span>간식</span></a></li>
+						  <li><a href='#'><span>유제품/음료</span></a></li>
+						  <li><a href='#'><span>건강식품</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li><a href='#'><span>+ 더보기</span></a></li>
+					</ul>
+				  </li>
+
+				  <!--herb-->               
+				  <li class='active has-sub'><a href='#'><span>허브</span></a>
+					<ul>
+					  <li class='has-sub'><a href='#'><span>오일</span></a>
+						<ul>
+						  <li><a href='#'><span>아르간 오일</span></a></li>
+						  <li><a href='#'><span>아로마테라피 오일</span></a></li>
+						  <li><a href='#'><span>마사지 오일</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li class='has-sub'><a href='#'><span>보습</span></a>
+						<ul>
+						  <li><a href='#'><span>알로에베라</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li class='has-sub'><a href='#'><span>면역력 강화</span></a>
+						<ul>
+						  <li><a href='#'><span>아쉬와간다</span></a></li>
+						  <li class='last'><a href='#'><span>민들레</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li class='has-sub'><a href='#'><span>관절염</span></a>
+						<ul>
+						  <li><a href='#'><span>유향</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li class='has-sub'><a href='#'><span>감기</span></a>
+						<ul>
+						  <li><a href='#'><span>에키네시아</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li class='has-sub'><a href='#'><span>당뇨, 콜레스트롤</span></a>
+						<ul>
+						  <li><a href='#'><span>호로파</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li class='has-sub'><a href='#'><span>상처치유</span></a>
+						<ul>
+						  <li><a href='#'><span>오레가노</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li><a href='#'><span>+ 더보기</span></a></li>
+					</ul>
+				  </li>
+				  
+				  <!--grocery-->
+				   <li class='active has-sub'><a href='#'><span>식료품</span></a>
+					<ul>
+					  <li class='has-sub'><a href='#'><span>가공식품</span></a>
+						<ul>
+						  <li><a href='#'><span>통조림</span></a></li>
+						  <li><a href='#'><span>면</span></a></li>
+						  <li><a href='#'><span>버터/잼</span></a></li>
+						  <li><a href='#'><span>양념류</span></a></li>
+						  <li><a href='#'><span>오일/조미료/소스</span></a></li>
+						  <li><a href='#'><span>육가공</span></a></li>
+						  <li><a href='#'><span>햄/육포</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li class='has-sub'><a href='#'><span>음료/간식</span></a>
+						<ul>
+						  <li><a href='#'><span>커피/차</span></a></li>
+						  <li><a href='#'><span>와인</span></a></li>
+						  <li><a href='#'><span>두유/우유/요거트</span></a></li>
+						  <li><a href='#'><span>생수/음료수</span></a></li>
+						  <li><a href='#'><span>과자/빵</span></a></li>
+						  <li><a href='#'><span>견과류/씨앗/곡물류</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li class='has-sub'><a href='#'><span>다이어트/식사대용 식품</span></a>
+						<ul>
+						  <li><a href='#'><span>다이어트푸드</span></a></li>
+						  <li><a href='#'><span>헬스/뷰티푸드</span></a></li>
+						  <li><a href='#'><span>뉴트리션 바/씨리얼</span></a></li>
+						  <li class='last'><a href='#'><span>+ 더보기</span></a></li>
+						</ul>
+					  </li>
+					  <li class='has-sub'><a href='#'><span>코셔인증 식품</span></a></li>
+					  <li class='has-sub'><a href='#'><span>유전자 변형이 없는 식재료</span></a></li>
+					  <li class='has-sub'><a href='#'><span>미가공 식품</span></a></li>
+					  <li class='has-sub'><a href='#'><span>수퍼푸드</span></a></li>
+					  <li><a href='#'><span>+ 더보기</span></a></li>
+					</ul>
+				  </li>
+				  
+				  <!--condition-->
+				   <li class='active has-sub'><a href='#'><span>컨디션</span></a>
+					<ul>
+					  <li class='has-sub'><a href='#'><span>혈압 관리</span></a></li>
+					  <li class='has-sub'><a href='#'><span>혈당 관리</span></a></li>
+					  <li class='has-sub'><a href='#'><span>콜레스테롤</span></a></li>
+					  <li class='has-sub'><a href='#'><span>면역 지원 </span></a></li>
+					  <li class='has-sub'><a href='#'><span>관절</span></a></li>
+					  <li class='has-sub'><a href='#'><span>남성/여성</span></a></li>
+					  <li class='has-sub'><a href='#'><span>기분</span></a></li>
+					  <li class='has-sub'><a href='#'><span>스트레스</span></a></li>
+					  <li class='has-sub'><a href='#'><span>체중 관리 </span></a></li>
+					  <li><a href='#'><span>+ 더보기</span></a></li>
+					</ul>
+				  </li>
+				</ul>
+			</div><!-- cssmenu -->
+		  </nav><!-- /c-menu slide-left -->
+		  		  
+		  <div id="c-mask" class="c-mask"></div>
+	  </div>
+	</div>
+		  
+
+	<!-- center -->
+	<div class="col-lg-8 col-sm-10">
+	  <div class="container-fluid c-content">
+		
+		<!-- 1. 광고페이지  -->
+		<div class="row">
+		  <div class="container-fluid" id="adSelling" onMouseOver="MM_showHideLayers('ad-indicators','','show','ad-btnLR','','show')"  onMouseOut="MM_showHideLayers('ad-indicators','','hide','ad-btnLR','','hide')">
+			<div id="ad" class="carousel slide" data-ride="carousel" data-interval="3500" data-pause="hover">
+			
+				<!-- Indicators -->
+				<ol class="carousel-indicators" id="ad-indicators">
+				  <li data-target="#ad" data-slide-to="0" class="active"></li>
+				  <li data-target="#ad" data-slide-to="1"></li>
+				  <li data-target="#ad" data-slide-to="2"></li>
+				</ol>
+				
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+				  <div class="item active">
+					<a href="sub/view/v_lipbalm.html"><img src="img/cf1.png"/></a>
+				  </div>
+				  <div class="item">
+					<a href="sub/view/v_omega.html"><img src="img/cf2.png"/></a>
+				  </div>
+				  <div class="item">
+					<a href="sub/view/v_handwash.html"><img src="img/cf3.png"/></a>
+				  </div>
+				</div>
+				
+				<!-- Left and right controls -->
+				<div id="ad-btnLR">
+					<a class="left carousel-control" href="#ad" role="button" data-slide="prev">
+					  <span class="fa fa-chevron-left"></span>
+					</a>				
+					<a class="right carousel-control" href="#ad" role="button" data-slide="next">
+					  <span class="fa fa-chevron-right"></span>
+					</a>
+				</div>
+			</div>
+		  </div>
+		</div>
+		
+		<!-- 2. 베스트 :: tab-selling -->
+		<div class="row">
+		  <div class="container-fluid" id="teb-selling">
+				<div class="page-header"><h2>Best Selling</h2></div>
+		    
+			<!-- tab navigation -->
+			<ul class="nav nav-tabs">
+				<li class="active"><a data-toggle="tab" href="#t-li1">건강보조식품</a></li>
+				<li><a data-toggle="tab" href="#t-li2">목욕용품</a></li>
+				<li><a data-toggle="tab" href="#t-li3">미용제품</a></li>
+				<li><a data-toggle="tab" href="#t-li4">아기용품</a></li>
+				<li><a data-toggle="tab" href="#t-li5">허브</a></li>
+				<li><a data-toggle="tab" href="#t-li6">식료품</a></li>
+			</ul>
+			<!-- tab content -->
+			<div class="tab-content" >
+
+			<!-- tab content start -->
+				<!-- 건강보조식품 -->
+				<div id="t-li1" class="tab-pane fade in active">
+					<div class="col-xs-12 myItem">
+					<div id="myIt1" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="hover">
+						<div class="carousel-inner">
+							<div class="item active">
+							   <div class="row">
+									<div class="col-sm-3 col-xs-6">
+										<figure class="thumbnail"><a href="sub/view/v_21century.html">
+										  <img src="http://images.iherb.com/l/CEN-22263-3.jpg" alt="Slide11"/>
+										  <div class="caption">
+											<p class="p-height">21st Century Health Care, Cal Mag Zinc + D3, 90 Tablets</p>
+											<p><span>₩3,266</span> &nbsp;<button class="btn btn-default" id="wishB" role="button">Wishlist</button></p>
+											<figcaption><button class="btn btn-default" role="button">Wishlist</button></figcaption>
+										  </div></a>
+										</figure>
+									</div>
+									<div class="col-sm-3 col-xs-6">
+										<figure class="thumbnail"><a href="sub/view/v_vita.html">
+										  <img src="http://www.images-iherb.com/l/RLT-12033-4.jpg" alt="Slide11"/>
+										  <div class="caption">
+											<p class="p-height">Rainbow Light, 구미 비타민 C 슬라이스, 톡 쏘는 오렌지 맛, 90 구미즈</p>
+											<p><span>₩6,969</span> &nbsp;<button class="btn btn-default" id="wishB" role="button">Wishlist</button></p>
+											<figcaption><button class="btn btn-default" role="button">Wishlist</button></figcaption>
+										  </div></a>
+										</figure> 
+									</div>
+									<div class="col-sm-3 col-xs-6">
+										<figure class="thumbnail"><a href="sub/view/v_omega.html">
+										  <img src="http://images.iherb.com/m/MLI-00952-3.jpg" alt="Slide11"/>
+										  <div class="caption">
+											<p class="p-height">Madre Labs, Omega-3 프리미엄 피쉬 오일, 100 피쉬 젤라틴 소프트젤</p>
+											<p><span>₩7,127</span> &nbsp;<button class="btn btn-default" id="wishB" role="button">Wishlist</button></p>
+											<figcaption><button class="btn btn-default" role="button">Wishlist</button></figcaption>
+										  </div></a>
+										</figure> 
+									</div>
+									<div class="col-sm-3 col-xs-6">
+										<figure class="thumbnail"><a href="sub/view/v_childlife.html">
+										  <img src="http://www.images-iherb.com/l/CDL-10700-7.jpg" alt="Slide11"/>
+										  <div class="caption">
+											<p class="p-height">ChildLife, Essentials, Liquid Calcium with Magnesium, 16 fl oz (474 ml)</p>
+											<p><span>₩18,397</span> &nbsp;<button class="btn btn-default" id="wishB" role="button">Wishlist</button></p>
+											<figcaption><button class="btn btn-default" role="button">Wishlist</button></figcaption>
+										  </div></a>
+										</figure> 
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="row">
+									<div class="col-sm-3 col-xs-6">
+										<figure class="thumbnail"><a href="#">
+										  <img src="http://images.iherb.com/m/CGN-00946-1.jpg" alt="Slide11"/>
+										  <div class="caption">
+											<p class="p-height">California Gold Nutrition, 프로폴리스 2X, 500 mg, 240 베지캡슐</p>
+											<p><span>₩22,374</span> &nbsp;<button class="btn btn-default" id="wishB" role="button">Wishlist</button></p>
+											<figcaption><button class="btn btn-default" role="button">Wishlist</button></figcaption>
+										  </div></a>
+										</figure>        
+									</div>
+									<div class="col-sm-3 col-xs-6">
+										<figure class="thumbnail"><a href="">
+										  <img src="http://images.iherb.com/m/NOW-01652-7.jpg" alt="Slide11"/>
+										  <div class="caption">
+											<p class="p-height">Now Foods, 오메가-3, 200 소프트젤 1971</p>
+											<p><span>₩11,918</span> &nbsp;<button class="btn btn-default" id="wishB" role="button">Wishlist</button></p>
+											<figcaption><button class="btn btn-default" role="button">Wishlist</button></figcaption>
+										  </div></a>
+										</figure> 
+									</div>
+									<div class="col-sm-3 col-xs-6">
+										<figure class="thumbnail"><a href="#">
+										  <img src="http://images.iherb.com/m/DRB-00143-10.jpg" alt="Slide11"/>
+										  <div class="caption">
+											<p class="p-height">Doctor's Best, Best Lutein, 120 Veggie Caps</p>
+											<p><span>₩15,307</span> &nbsp;<button class="btn btn-default" id="wishB" role="button">Wishlist</button></p>
+											<figcaption><button class="btn btn-default" role="button">Wishlist</button></figcaption>
+										  </div></a>
+										</figure>    
+									</div>
+									<div class="col-sm-3 col-xs-6">
+										<figure class="thumbnail"><a href="#">
+										  <img src="http://images.iherb.com/m/MLI-00226-8.jpg" alt="Slide11"/>
+										  <div class="caption">
+											<p class="p-height">Madre Labs, 심플리 아사이 유기농 파우더, 8 oz (227 g) 423</p>
+											<p><span>₩25,871</span> &nbsp;<button class="btn btn-default" id="wishB" role="button">Wishlist</button></p>
+											<figcaption><button class="btn btn-default" role="button">Wishlist</button></figcaption>
+										  </div></a>
+										</figure> 
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="row">
+									<div class="col-sm-3 col-xs-6">
+										<figure class="thumbnail"><a href="#">
+										  <img src="http://images.iherb.com/k/DRB-00228-5.jpg" alt="Slide11"/>
+										  <div class="caption">
+											<p class="p-height">Doctor's Best, 베스트 히알루론산, 황산 콘드로이틴 포함, 180 캡슐</p>
+											<p><span>₩36,867</span>&nbsp;<button class="btn btn-default" id="wishB" role="button">Wishlist</button></p>
+											<figcaption><button class="btn btn-default" role="button">Wishlist</button></figcaption>
+										  </div></a>
+										</figure>        
+									</div>
+									<div class="col-sm-3 col-xs-6">
+										<figure class="thumbnail"><a href="#">
+										  <img src="http://images.iherb.com/k/JRW-03024-7.jpg" alt="Slide11"/>
+										  <div class="caption">
+											<p class="p-height">Jarrow Formulas, 자로우-도피러스 EPS, 120 식물성 캡슐</p>
+											<p><span>₩34,339</span>&nbsp;<button class="btn btn-default" id="wishB" role="button">Wishlist</button></p>
+											<figcaption><button class="btn btn-default" role="button">Wishlist</button></figcaption>
+										  </div></a>
+										</figure> 
+									</div>
+									<div class="col-sm-3 col-xs-6">
+										<figure class="thumbnail"><a href="#">
+										  <img src="http://images.iherb.com/k/DRB-00188-15.jpg" alt="Slide11"/>
+										  <div class="caption">
+											<p class="p-height">Doctor's Best, CoQ10, BioPerine 포함, 100 mg, 120 식물성 캡슐</p>
+											<p><span>₩14,313</span> &nbsp;<button class="btn btn-default" id="wishB" role="button">Wishlist</button></p>
+											<figcaption><button class="btn btn-default" role="button">Wishlist</button></figcaption>
+										  </div></a>
+										</figure> 
+									</div>
+									<div class="col-sm-3 col-xs-6">
+										<div class="thumbnail t-More">
+										  <a href="sub/list/cCalMore.html"><p class="btn"><span class="glyphicon glyphicon-zoom-in"></span><span id="more"> 더보기</span></p></a>
+										</div> 										
+									</div>									
+								</div>
+							</div>
+						</div>
+						
+						<a class="left carousel-control" href="#myIt1" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
+						<a class="right carousel-control" href="#myIt1" data-slide="next"><i class="fa fa-chevron-right fa-2x"></i></a>
+						
+						<ol class="carousel-indicators">
+							<li data-target="#myIt1" data-slide-to="0" class="active"></li>
+							<li data-target="#myIt1" data-slide-to="1"></li>
+							<li data-target="#myIt1" data-slide-to="2"></li>
+						</ol>                
+					</div><!-- End Carousel --> 
+					</div><!-- End myItem -->
+				</div>
+
+				<!-- 목욕 -->
+				<div id="t-li2" class="tab-pane fade s-sliding">				
+					<div class="col-xs-12 myItem">
+					<div id="myIt2" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="hover">
+						<div class="carousel-inner">
+							<div class="item active">
+							   <div class="row">
+									<div class="col-sm-3 col-xs-6">
+										<figure class="thumbnail"><a href="sub/view/v_nubian.html">
+										  <img src="http://www.images-iherb.com/l/NBH-10600-11.jpg" alt="Slide11"/>
+										  <div class="caption">
+											<p class="p-height">Nubian Heritage, African Black Soap Bar, 5 oz (141 g)</p>
+											<p><span>₩4,642</span> &nbsp;<button class="btn btn-default" id="wishB" role="button">Wishlist</button></p>
+											<figcaption><button class="btn btn-default" role="button">Wishlist</button></figcaption>
+										  </div></a>
+										</figure>
+									</div>
+									<div class="col-sm-3 col-xs-6">
+										<figure class="thumbnail"><a href="sub/view/v_lipbalm.html">
+										  <img src="http://www.images-iherb.com/l/MBE-00962-1.jpg" alt="Slide11"/>
+										  <div class="caption">
+											<p class="p-height">Sierra Bees, 유기농 립밤, 8 팩</p>
+											<p><span>₩5,734</span> &nbsp;<button class="btn btn-default" id="wishB" role="button">Wishlist</button></p>
+											<center><figcaption><button class="btn btn-default" role="button">Wishlist</button></figcaption></center>
+										  </div></a>
+										</figure> 
+									</div>
+									<div class="col-sm-3 col-xs-6">
+										<figure class="thumbnail"><a href="sub/view/v_handwash.html">
+										  <img src="http://www.images-iherb.com/l/SOF-00013-1.jpg" alt="Slide11"/>
+										  <div class="caption">
+											<p class="p-height">South of France, Climbing Wild Rose, Hand Wash with Soothing Aloe Vera, 8 oz (236 ml)</p>
+											<p><span>₩1,969</span> &nbsp;<button class="btn btn-default" id="wishB" role="button">Wishlist</button></p>
+											<center><figcaption><button class="btn btn-default" role="button">Wishlist</button></figcaption></center>
+										  </div></a>
+										</figure> 
+									</div>
+									<div class="col-sm-3 col-xs-6">
+										<figure class="thumbnail"><a href="#">
+										  <img src="http://www.images-iherb.com/k/NBH-13000-12.jpg" alt="Slide11"/>
+										  <div class="caption">
+											<p class="p-height">Nubian Heritage, 로우 시어버터 솝, 두유 있는, 유향 & 몰약, 5 온스 (141 g)</p>
+											<p><span>₩4,642</span> &nbsp;<button class="btn btn-default" id="wishB" role="button">Wishlist</button></p>
+											<center><figcaption><button class="btn btn-default" role="button">Wishlist</button></figcaption></center>
+										  </div></a>
+										</figure> 
+									</div>
+								</div>
+							</div>
+							<div class="item">
+							   <div class="row">
+									<div class="col-sm-3 col-xs-6">
+										<figure class="thumbnail"><a href="#">
+										  <img src="http://www.images-iherb.com/k/NOW-07665-6.jpg" alt="Slide11"/>
+										  <div class="caption">
+											<p class="p-height">Now Foods, Solutions, 살구 오일, 4 fl oz (118 ml)</p>
+											<p><span>₩3,700</span> &nbsp;<button class="btn btn-default" id="wishB" role="button">Wishlist</button></p>
+											<center><figcaption><button class="btn btn-default" role="button">Wishlist</button></figcaption></center>
+										  </div></a>
+										</figure> 
+									</div>
+									<div class="col-sm-3 col-xs-6">
+										<figure class="thumbnail"><a href="#">
+										  <img src="http://www.images-iherb.com/k/NBH-10603-0.jpg" alt="Slide11"/>
+										  <div class="caption">
+											<p class="p-height">Nubian Heritage, 아프리카 블랙 비누, 바디 워시, 13 액량 온스(384 ml)</p>
+											<p><span>₩11,589</span> &nbsp;<button class="btn btn-default" id="wishB" role="button">Wishlist</button></p>
+											<center><figcaption><button class="btn btn-default" role="button">Wishlist</button></figcaption></center>
+										  </div></a>
+										</figure> 
+									</div>
+									<div class="col-sm-3 col-xs-6">
+										<figure class="thumbnail"><a href="#">
+										  <img src="http://www.images-iherb.com/l/NOW-07758-8.jpg" alt="Slide11"/>
+										  <div class="caption">
+											<p class="p-height">Now Foods, 솔루션스, 시어 버터, 유기농 인증, 7 fl oz (207 ml)</p>
+											<p><span>₩11,554</span> &nbsp;<button class="btn btn-default" id="wishB" role="button">Wishlist</button></p>
+											<center><figcaption><button class="btn btn-default" role="button">Wishlist</button></figcaption></center>
+										  </div></a>
+										</figure> 
+									</div>
+									<div class="col-sm-3 col-xs-6">
+										<div class="thumbnail t-More">
+										  <a href="#"><p class="btn"><span class="glyphicon glyphicon-zoom-in"></span><span id="more"> 더보기</span></p></a>
+										</div> 										
+									</div>									
+								</div>
+							</div>
+						</div>
+						<a class="left carousel-control" href="#myIt2" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
+						<a class="right carousel-control" href="#myIt2" data-slide="next"><i class="fa fa-chevron-right fa-2x"></i></a>
+						
+						<ol class="carousel-indicators">
+							<li data-target="#myIt2" data-slide-to="0" class="active"></li>
+							<li data-target="#myIt2" data-slide-to="1"></li>
+						</ol>                
+					</div>
+					</div>
+				</div>
+
+			</div>
+
+		  </div><!-- selling -->
+		</div><!-- row -->
+		
+		<!-- 3. Event & information -->
+		<div class="row evin">
+		  
+		  <!-- event -->
+		  <div class="col-sm-5 col-xs-12 event">
+			<div class="b_event" onMouseOver="MM_showHideLayers('b-indicators','','show')" onMouseOut="MM_showHideLayers('b-indicators','','hide')">
+			<div class="page-header"><h2>Event</h2></div>
+			
+				<div id="myEvent" class="carousel slide" data-ride="carousel" data-interval="4500" data-pause="hover">
+					
+					<div class="carousel-inner" role="listbox">           
+						
+						<!-- 1.daily deal : -->
+						<div class="item active">
+							<h3 class="page-header">Daily Deal</h3>
+							<a href="sub/view/v_21century.html">
+							  <div class="eventbox">
+								<!-- image:ribbon -->
+								<img src="img/ribbon.png" id="ribbon"/>
+								<!-- daily : ribbon, product-->
+								<div class="ribbon-box">
+								  <div class="row">
+								    <div class="col-xs-offset-3 col-xs-6" style="text-align:center;">
+									  <img src="http://images.iherb.com/l/CEN-22263-3.jpg" id="eventProduct"/>
+									</div>
+								    <div class="col-sm-12 col-xs-6" id="p">
+									  <p style="margin-bottom:10px;"><mark>24시간</mark></p>
+									  <p>21st Century Health Care, Cal Mag Zinc + D3, 90 Tablets</p>
+									  <p style="color:red; font-size:1.4em; text-decoration:underline;">₩1,000</p>
+								    </div>
+								  </div>
+								  <!-- event time -->
+								  <div class="row"><div class="counter"><div id="countdown"></div></div></div>
+								</div>
+							  </div>
+							</a>
+							<div class="font">
+								<p><span class="glyphicon glyphicon-pushpin" ></span> 데일리 딜은 <span style="color:DeepPink;">월요일부터 목요일까지 10시(미서부 시간 기준)</span>에 매일 다른 할인된 상품이 올라오고 있습니다.</p>
+								<p><span class="glyphicon glyphicon-pushpin" ></span> 위크앤드 딜은 <span style="color:DeepPink;">금요일 오전 10시에 시작하여 돌아오는 주 월요일 10시에 종료</span>됩니다.</p>
+								<p><span class="glyphicon glyphicon-pushpin" ></span> 데일리 딜과 위크앤드 딜의 행사제품은 <span style="color:DeepPink;">계정당 1개의 수량만 특별할인 가격이 적용</span>되며, 초과된 수량의 제품은 구매 시 iHerb의 일반 가격이 적용됩니다.</p>
+							</div>
+						</div>
+						
+						<!-- 2.weekly deal: -->
+						<div class="item">
+							<h3 class="page-header">Weekly Deal</h3>
+							<a href="#">
+								<div class="panel panel-default">
+								  <div class="panel-heading">인기 브랜드 제품이 <span>20% 할인!!!</span></div>
+								  <div class="panel-body">
+								    <img src="http://s.iherb.com/i/banners/madeinnature-92215.png"/>
+								    <img src="http://s.iherb.com/i/banners/Quinn-92215.png"/>
+								    <img style="margin-left:20px;" src="http://s.iherb.com/i/banners/Bdellium-92215.png"/>
+								  </div>
+								</div>
+							</a>
+							<div class="font">
+								<p><span class="glyphicon glyphicon-pushpin" ></span> 새로운 위클리 딜은 <span style="color:DeepPink;">매주 수요일 오전 10시(미서부 시간 기준)부터 1주일간 </span>진행됩니다. 적용된 추가 할인은 장바구니에서 확인이 가능합니다.</p>
+							</div>
+							
+							<h3 class="page-header">Clearance Sale</h3>
+							<a href="sub/list/eventPage.html"><img class="thumbnail" src="img/clearance_sale.png" alt="slide3"/></a>
+							<div class="font">
+							  <p><span class="glyphicon glyphicon-pushpin" ></span> 할인 제품은 수량의 제한으로 조기 종료될 수 있습니다. 재고가 없거나 행사가 종료된 이후 구매하시는 제품은 행사가격과 동일하게 적용되지 않을 수 있습니다. </p>
+							</div>							
+						</div>
+						
+						<!-- 3. more 이벤트 -->
+						<div class="item brands">
+							<h3 class="page-header">Today Brands Deal</h3>
+							<a href="sub/list/brandsDeal_earthscience.html"><img class="thumbnail" src="img/beauty2.png" alt="beauty"/></a>
+							<a href="sub/list/brandsDeal_ecotool.html"><img class="thumbnail" src="img/beauty1.png" alt="beauty"/></a>
+							<a href="sub/list/brandsDeal_nubian.html"><img class="thumbnail" src="img/beauty3.png" alt="beauty"/></a>
+							<a href="sub/list/brandsDeal_now.html"><img class="thumbnail" src="img/beauty4.png" alt="beauty"/></a>							
+						</div>
+					</div>   
+					
+					<div class="event-btn">
+						<a class="left carousel-control" href="#myEvent" data-slide="prev"><i class="fa fa-angle-double-left"></i></a>
+						<a class="right carousel-control" href="#myEvent" data-slide="next"><i class="fa fa-angle-double-right"></i></a>                                   
+					</div>
+
+					<!-- indicators :: myEvent -->
+					<ul class="carousel-indicators" id="b-indicators">
+						<li data-target="#myEvent" data-slide-to="0" class="active"></li>
+						<li data-target="#myEvent" data-slide-to="1"></li>
+						<li data-target="#myEvent" data-slide-to="2"></li>
+					</ul>
+					
+				</div><!-- End Carousel -->  
+			</div>
+		  </div>
+		  
+		  <!-- information -->
+		  <div class="col-sm-7 col-xs-12 info">
+			<div class="b_info">
+			<div class="page-header"><h2>Information</h2></div> 
+				
+				<div class="row">
+				  <h3 class="page-header">체험상품</h3>
+				  <a href="#">
+				  <div class="col-md-7 col-sm-12 col-xs-7 sample">
+					<p id="p-sample"><span class="glyphicon glyphicon-gift"></span> 저렴한 가격으로 체험하세요!</p>
+					<div class="font">
+					  <p><span class="glyphicon glyphicon-pushpin" ></span> 구매자 당 1번만 특별 가격 적용됩니다.</p>
+					  <p><span class="glyphicon glyphicon-pushpin" ></span> 오직 1개의 제품만 선택 가능하며 같은 제품을 재주문 시, 일반 가격이 적용됩니다.</p>
+					</div>
+				  </div>
+				  </a>
+				  <!-- sample side carousel -->
+				  <div class="col-md-3 col-sm-12 col-xs-4 mySample">
+					<div id="mySample" class="carousel slide" data-ride="carousel" data-interval="2000">
+						<div class="carousel-inner">
+							<div class="item active">
+								<div class="row">
+									<div class="col-md-12 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="http://images.iherb.com/k/MLI-00248-0.jpg" alt="imgSample"/></a>
+									</div>
+									<div class="col-md-12 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="http://images.iherb.com/k/UEC-70142-15.jpg" alt="imgSample"/></a>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="row">
+									<div class="col-md-12 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="http://images.iherb.com/k/STD-96803-11.jpg" alt="imgSample"/></a>
+									</div>
+									<div class="col-md-12 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="http://images.iherb.com/k/HOG-88232-7.jpg" alt="imgSample"/></a>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="row">
+									<div class="col-md-12 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="http://images.iherb.com/k/REV-11384-3.jpg" alt="imgSample"/></a>
+									</div>
+									<div class="col-md-12 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="http://images.iherb.com/k/IHB-00918-10.jpg" alt="imgSample"/></a>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="row">
+									<div class="col-md-12 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="http://images.iherb.com/k/SOF-30012-1.jpg" alt="imgSample"/></a>
+									</div>
+									<div class="col-md-12 col-sm-6 col-xs-12"><a href="#" class="thumbnail"><img src="http://images.iherb.com/k/ATT-91009-1.jpg" alt="imgSample"/></a>
+									</div>
+								</div>
+							</div>
+						</div>                
+					</div>
+				  </div>
+				</div>
+				
+				<div class="row">
+				  <div class="col-xs-5 leaf"></div>
+				  <div class="col-xs-7">
+					<h3 class="page-header">Benefits</h3>
+					<ul>
+					  <a href="#"><li>통관문제 해결(2,400여 제품의 판매가능)</li></a>
+					  <a href="#"><li>첫구매고객행사 : $5.00 할인</li></a>
+					  <a href="#"><li>프로모션</li></a>
+					  <a href="#"><li>$40 이상 주문 시 무료 택배!!</li></a>
+					</ul>
+				  </div>
+				</div>
+				
+				<div class="row">
+				  <div class="col-xs-8" style="margin:10px 20px 0;">
+ 					<h3 class="page-header">고객서비스</h3>
+					<ul>
+					  <a href="#"><li>개인통관고유번호</li></a>
+					  <a href="#"><li>배송안내</li></a>
+					  <a href="#"><li>개인정보정책&이용약관</li></a>
+					  <a href="#"><li>참고 페이지</li></a>
+					</ul>					
+				  </div>
+				</div>
+				
+				<!-- SNS -->
+				<div class="row component">
+					<a href="http://www.facebook.com/iHerb" class="icon icon-cube facebook">facebook</a>
+					<a href="http://twitter.com/iherb" class="icon icon-cube twitter">twitter</a>
+					<a href="https://plus.google.com/+iherb/posts" class="icon icon-cube googleplus">google+</a>
+					<a href="http://instagram.com/iherbinc" class="icon icon-cube instagram">instagram</a>
+					<a href="http://www.youtube.com/user/iherbinc?feature=watch" class="icon icon-cube youtube">youtube</a>
+					<a href="http://www.pinterest.com/iherbinc/" class="icon icon-cube pinterest">pinterest</a>
+				</div>
+				
+			</div>			
+		  </div>
+		  
+		</div>
+		
+		<!-- 4. footer:copy righter -->
+		<footer class="row" id="footer">
+		  <div class="container-fluid">
+			<p>
+				<a href="#">iHerb.com</a> &copy; Copyright 1997-2015 iHerb Inc. All rights reserved.
+				<span class="hide">iHerb® 는 iHerb사의 등록상표입니다. Trusted Brands. Healthy Rewards. 로고는 iHerb,INC.의 등록상표입니다. *면책사항: 본 웹사이트를 통해 작성된 문서 또는 판매된 상품은 미국식약처에 의해 검증되지 않았습니다. 해당 정보 및 제품들은 질병에 관한 진단, 치료 또는 예방을 목적으로 하지 않습니다.</span>
+			</p>
+			<a href="#"><img src="http://s.iherb.com/i/images/nsf.png"/></a>
+			<a href="#"><img src="http://s.iherb.com/i/images/consumer-labs.png"/></a>
+			<a href="#"><img src="https://s.iherb.com/i/c/05102015.gif"/></a>
+		  </div>
+		</footer>
+		
+	  </div>	  
+	</div><!-- center -->
+
+	<div class="col-lg-2 col-md-1"></div>
+  </div>
+</div>
+
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- script -->
+<script src="js/menu.js"></script>
+<script src="js/script.js"></script>
+
+	</body>
+</html>
