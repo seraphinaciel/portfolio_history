@@ -1,0 +1,155 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+body {
+	font-family: 'Questrial', sans-serif;
+}
+
+header {
+	height: 90vh;
+	padding: 36px;
+	background: #F0F0F0;
+	color: #19ce60;
+}
+
+header h1 {
+	width: 300px;
+	font-size: 4.2em;
+	margin: 36px 0;
+}
+
+header h2 {
+	font-size: 1.6em;
+	margin-bottom: 36px;
+}
+
+header p {
+	line-height: 1.6;
+	margin-bottom: 36px;
+}
+
+header nav {
+	margin-bottom: 36px;
+}
+
+header nav a {
+	color: #606060;
+	display: inline-block;
+	margin: 0 4px 14px 0;
+	padding-bottom: 4px;
+	border-bottom: 1px solid;
+}
+
+header nav em {
+	display: block;
+	margin-top: 12px;
+	font-size: 0.625em;
+	color: #888;
+}
+
+main {
+	padding: 0 36px;
+	background: #19ce60;
+}
+
+main nav {
+	padding: 36px 48px;
+	font-size: 1em;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	color: #fff;
+	border-bottom: 1px solid #15c654;
+	text-align: center;
+	line-height: 1.6;
+}
+
+main nav.sticky {
+	background: #19ce60;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+}
+
+main nav button {
+	color: #2d68d2;
+	font-size: 1em;
+	text-decoration: underline;
+}
+
+main nav button:hover {
+	color: #fff;
+}
+
+main article {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+main article h2 {
+	width: 80%;
+	font-size: 2.4em;
+	font-weight: 600;
+}
+
+main article p {
+	font-size: 1.3em;
+}
+
+main article section {
+	position: relative;
+	display: flex;
+	margin: 2em 0 3em;
+}
+
+main article section h3 {
+	font-size: 1.3em;
+	padding: 6px;
+	background: #2030A4;
+	display: inline-block;
+	color: #fff;
+	position: absolute;
+	top: 20%;
+	left: -10px;
+}
+
+main article section h3 i {
+	font-size: .8em;
+	vertical-align: top;
+}
+
+main article section video[poster] {
+	width: 100%;
+}
+
+main article section span {
+	flex-flow: column wrap;
+	align-content: flex-end;
+	text-align: center;
+}
+
+main article section span button {
+	background: #2030a4;
+	color: #fff;
+	width: 36px;
+	height: 36px;
+}
+
+main article section span em {
+	background: #2030a4;
+	color: #fff;
+	width: 36px;
+	line-height: 36px;
+	display: block;
+}
+
+main article div {
+	line-height: 1.6;
+	font-weight: 600;
+}
+
+main article div strong {
+	display: flex;
+	justify-content: flex-end;
+}

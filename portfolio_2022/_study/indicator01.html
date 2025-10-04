@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>indicator</title>
+<meta name="title" content="Sera portfolio">
+<meta name="author" content="lee sera">
+<meta name="description" content="Sera portfolio">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+	*{margin:0;padding:0;border:0;background:0;list-style: none}
+	.hide{display:none}
+</style>
+</head>
+<body>
+
+<style>
+.sub_visual{padding: 8.021% 16vw;background: rgba(39, 22, 88, 0.7);position:relative;}
+.sub_visual span{width:100%;height:100%;position:absolute;top:0;left:0;z-index: -1;}
+.sub_visual div{width:100%;max-width: 1320px;display:flex;justify-content: space-between;align-items: baseline;}
+.sub_visual h2{font-size: calc(4rem / var(--text-multiplier));color:white;text-transform: capitalize;letter-spacing:1px;justify-content: space-between;display:flex;align-items: self-end;}
+.sub_visual em{font-weight:400;display: block;font-size: 35%;text-transform: uppercase;letter-spacing: 2px}
+.sub_visual h3{font-size: calc(2rem / var(--text-multiplier));color: white;text-align: right;width:100%}
+.sub_visual h3 em{font-weight:900;font-size: 100%;letter-spacing: 1em}
+@media all and (max-width:600px){
+.sub_visual{padding:8vw 10vw}
+.sub_visual div{flex-direction: column;}
+}
+
+.pageIndicator{max-width: 1640px;height:124px;margin: auto; display: flex;position: relative}
+.pageIndicator button{width:50%;cursor: pointer}
+.pageIndicator div{height:100%;padding:0 50px;background: rgba(39, 22, 88, 0.7);display:flex;flex-wrap: wrap;align-content: center;color:white;transition: .3s ease-in-out}
+.pageIndicator span{padding:0 20px;display:flex;flex-direction: column;font-size: .875rem;letter-spacing: 10px;}
+.pageIndicator strong{letter-spacing:0; font-size: 1.125rem;font-weight:600}
+.pageIndicator i{font-size: 2rem;display:flex;flex-wrap: wrap;align-content: center;}
+.pageIndicator button:hover div{background: rgba(39, 22, 88, 0.94)}
+
+.pageIndicator button:disabled div{background:lightgray;color:gray;}
+
+.pageIndicator .prev div{text-align: left;}
+.pageIndicator .next div{text-align: right;justify-content: flex-end}
+
+.pageIndicator .list{width: 90px;height:90px;background:white;position:absolute;top:calc(50% - 45px);left:calc(50% - 45px);text-align:center;text-transform: uppercase;letter-spacing: 5px;font-size:.875rem;font-weight:900;}
+.pageIndicator .list i{font-size: 1rem;padding-bottom:6px;display: block}
+
+@media all and (max-width:500px){
+.pageIndicator div{padding:0 30px;word-break: break-all}
+.pageIndicator strong{display:none}
+.pageIndicator .list{width: 60px;height:60px;background:white;position:absolute;top:calc(50% - 30px);left:calc(50% - 30px);font-size:.625rem;}
+}
+	
+.concept{max-width: 1440px;padding:0 16vw;flex-direction: column}
+.concept h2{font-size: calc(2.25rem / var(--text-multiplier));font-weight:500;width: 100%;text-align: center}
+.concept ul{max-width: 1320px;/* padding:0 60px; */display:flex;flex-wrap: wrap;}
+.concept li{font-size: .875rem;width: 33.333%;padding-bottom:1rem;text-transform: capitalize;line-height: 2.8}
+.concept strong{font-weight: 900;font-size: 1rem;letter-spacing: 0; display:block}
+.concept p{text-align: center;margin-top: 2rem;}
+.concept p a{background: rgba(39, 22, 88, 1);color: white;padding:.875rem 4em;text-transform: uppercase;font-size:.875rem; letter-spacing: 0}
+.concept li:last-child{width:100%;}
+
+/*
+	.concept dl{display:flex;flex-wrap: wrap;width:100%;}
+	.concept dt{width:20%;padding-top:1em;}
+	.concept dd{width:80%;display:flex;margin:0;padding-top: 1em;}
+	.concept dd + dd{width:100%;padding-top:0}
+	.concept dt + dd{background: darkblue}
+	.concept dd + dd::before{width:20%;content: "";padding-top:0}
+*/
+dl {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+dt {
+  font-weight: bold;  
+  width: 25%;
+  padding-top: 1em;  
+}
+dd {
+  display: flex;
+  margin: 0;
+  padding-top: 1em;
+}
+
+dd + dd {
+  width: 100%; 
+  padding-top: 0;  
+}
+dt + dd:not(:nth-child(2)),
+dt:first-child + dd:nth-child(2) {
+  width: 75%;
+}
+dd + dd::before {
+  width: 25%;
+  content: "";
+  padding-top: 0
+}	
+@media all and (max-width:700px){
+.concept{padding:0 10vw}
+.concept ul{padding:0;}
+.concept li{width: 100%}
+}
+</style>
+
+
+
+<section class="sub_visual">
+	<span></span>
+	<div>
+		<h2>제목</h2>
+		<h3><em>hello world</em><em>hello universe</em></h3>
+	</div>
+</section>
+
+<section class="concept">
+	<h2>hello</h2>
+	<ul>
+		<li><strong>hello</strong>world hello universe marvel ironman</li>
+		<li><strong>hello</strong>world hello universe marvel ironman</li>
+		<li><strong>hello</strong>world hello universe marvel ironman</li>
+		<li><strong>hello</strong>
+			<dl>
+				<dt>hello</dt>
+				<dd>world hello universe marvel ironmanworld hello universe marvel ironmanworld hello universe marvel ironmanworld hello universe marvel ironmanworld hello universe marvel ironmanworld hello universe marvel ironmanworld hello universe marvel </dd>
+				<dd>ironmanworld hello universe marvel ironmanworld hello universe marvel ironmanworld hello universe marvel ironmanworld hello universe marvel ironmanworld hello universe marvel ironmanworld hello universe marvel ironmanworld hello universe marvel ironmanworld hello universe marvel ironmanworld hello universe marvel ironmanworld hello universe marvel ironmanworld hello universe marvel ironman</dd>
+				<dt>hello</dt>
+				<dd>universe</dd>
+				<dt>marvel</dt>
+				<dd>ironman</dd>
+				<dd>ironman</dd>
+				<dd>ironman</dd>
+			</dl>
+		</li>
+	</ul>
+</section>
+
+
+<section class="concept hide">
+	<h2></h2>
+	<ul>
+		<li><strong>work</strong>main design &amp; publishing</li>
+		<li><strong>date</strong>2018 0112~0118</li>
+		<li><strong>type</strong>responsible</li>
+		<li><strong>concept</strong>
+
+			<dl>
+				<dt>메인컨셉</dt>
+				<dd>말과 사람의 소통</dd>
+				<dt>컬러</dt>
+				<dd>장수군의 심볼컬러를 그대로 메인 컬러로 사용하여 장수군의 정체성확립하고 초록들판까지 함께 상징</dd>
+				<dt>UI/UX</dt>
+				<dd>상단 비주얼영역은 넓고 크게 보여주며 말과 사람의 컨셉에 어울리고, 체험 유도를 극대화시킬 수 있는 비주얼을 채택.</dd>
+				<dd>하단 영역은 메트로UI를 사용하여 트랜디한 UI구조로 빠른 정보 이동에 용이하도록 구성</dd>
+				<dd>길찾기 버튼 등 사용자의 편의를 고려</dd>
+			</dl>
+		</li>
+<!--
+
+- 
+
+
+- 
+
+
+- 
+- 
+- 
+-->
+	</ul>
+	<p><a href="" target="_blank" title="새창으로 열기">web more</a></p>
+</section>
+
+<div class="pageIndicator">
+	<button class="prev" onclick="indicatorBox()" title="이전 버튼 바로가기"></button>
+	<button class="list" onclick="location.href='../index.html'">list</button>
+	<button class="next" onclick="indicatorBox()" title="다음 버튼 바로가기"></button>
+</div>
+
+
+	
+<script>
+//선택 복붙!!!
+const subVisual = document.querySelector(".sub_visual span");
+const subVisualTitle = document.querySelector(".sub_visual h2");
+const prevBtn = document.querySelector(".pageIndicator .prev");
+const nextBtn = document.querySelector(".pageIndicator .next");
+
+const currentLink = document.location.href; 
+const localFullName = document.URL.substring(document.URL.lastIndexOf('/') + 1);
+const localName = parseInt(localFullName.substring(localFullName.lastIndexOf('.'), 9));
+
+const CURRENT_NUM = localName;
+const PREV_NUM = localName - 1; //0
+const NEXT_NUM = localName + 1; //0
+const PAGE_NUM_PREV = String(PREV_NUM).padStart(2, "0"); //00
+const PAGE_NUM_NEXT = String(NEXT_NUM).padStart(2, "0"); //00
+	
+//const subTitle = subVisualTitle.innerText;
+const testBgColor = ['crimson', 'aqua', 'darkgray','floralwhite']
+const subTitle = ['crimson', 'aqua', 'darkgray','floralwhite']
+/*
+const subTitle = [
+'장수군 승마레저파크',
+	'고창_군립도서관',
+	'전라북도 농업기술원',
+	'익산시의회',
+	'고창군청',
+	'순창군청',
+	'전북도청',
+	'담양 대나무 축제',
+	'전남지원청(함평, 화순, 신안)',
+	'광주광역시 빅데이터',
+	'전북교육청',
+	'대구고등학교(템플릿)',
+	'익산시 체육시설예약',
+	'비짓전주',
+	'임실군청',
+	'군산대 학과 개편',
+	'부안군청 통합예약',
+	'제주도교육청 통합도서관'
+]
+*/
+function indicatorTxt(){
+	subVisualTitle.innerText = subTitle[CURRENT_NUM];
+	
+	subVisual.style.backgroundColor = testBgColor[CURRENT_NUM];	
+	prevBtn.style.backgroundColor = testBgColor[PREV_NUM];
+	nextBtn.style.backgroundColor = testBgColor[NEXT_NUM];
+	
+	prevBtn.innerHTML = `<div><span>이전버튼<strong>${subTitle[PREV_NUM]}</strong></span></div>`;
+	nextBtn.innerHTML = `<div><span>다음버튼<strong>${subTitle[NEXT_NUM]}</strong></span></div>`;
+	
+	if(localName === 0){
+		prevBtn.disabled = true;
+		prevBtn.style = `cursor:auto`;
+		prevBtn.innerHTML = `<div><span>이전버튼<strong>없습니다</strong></span></div>`;
+	}else if(localName === 13){
+		nextBtn.disabled = true;
+		nextBtn.style = `cursor:auto`;
+		nextBtn.innerHTML = `<div><span>다음버튼<strong>없습니다</strong></span></div>`;
+	}
+}
+
+function indicatorBox(){
+	if (window.location == currentLink) {
+		if(this.className == 'prev'){
+			console.log('subpage__'+PAGE_NUM_PREV)
+		}else{
+			console.log('subpage__'+PAGE_NUM_NEXT)
+		}
+	}
+}
+
+indicatorTxt();
+//prevBtn.addEventListener("click", indicatorBox);
+//nextBtn.addEventListener("click", indicatorBox);
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

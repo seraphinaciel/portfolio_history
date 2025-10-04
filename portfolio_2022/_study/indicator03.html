@@ -1,0 +1,208 @@
+			<!doctype html>
+			<html lang="ko">
+			<head>
+			<meta charset="utf-8">
+			<title>indicator</title>
+			<meta name="title" content="Sera portfolio">
+			<meta name="author" content="lee sera">
+			<meta name="description" content="Sera portfolio">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+			<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+			<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+			<style>
+				*{margin:0;padding:0;border:0;background:0;list-style: none}
+				.hide{display:none !important}
+			</style>
+			</head>
+			<body>
+
+			<!---------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+			<section class="concept hide">
+				
+			</section>
+
+			<!---------------------------------------------------------------------------------------------------------------------->
+
+	<section class="concept hide">
+		
+	</section>
+
+	<!---------------------------------------------------------------------------------------------------------------------->
+
+	<section class="concept hide">
+		
+	</section>
+
+	<!---------------------------------------------------------------------------------------------------------------------->
+
+	<section class="concept hide">
+		<h2>전북교육청'</h2>
+		
+	</section>
+
+	<!---------------------------------------------------------------------------------------------------------------------->
+
+	<section class="concept hide">
+		<h2>대구고등학교(템플릿)'</h2>
+		
+	</section>
+
+	<!---------------------------------------------------------------------------------------------------------------------->
+
+	<section class="concept hide">
+		<h2>익산시 체육시설예약시스템'</h2>
+		
+	</section>
+
+	<!---------------------------------------------------------------------------------------------------------------------->
+
+	<section class="concept hide">
+		<h2>비짓전주'</h2>
+		
+	</section>
+
+			<!---------------------------------------------------------------------------------------------------------------------->
+
+			<section class="concept hide">
+				<h2>임실군청'</h2>
+				
+				
+			</section>
+
+			<!---------------------------------------------------------------------------------------------------------------------->
+
+	<section class="concept hide">
+		<h2>군산대 학과 개편</h2>
+		
+	</section>
+
+			<!---------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+			<p>first write to project, after then append sort of design draft. <strong>complete</strong></p>
+			<p>each of slide to project, design</p>
+
+
+
+
+			<!--
+			2017.11. - 전북도청, 익산, 장수, 경남유아, 무주
+			2018 - 거제, 전남교육청, 제주도교육청, 경남유아, 삼척
+			2019 - 전북도청, 부안, 장수, 무주, 정읍
+			2020 - 전북도청, 익산, 임실, 군산시립
+			2021 - 거제, 울진, 군산대, 무주, 삼척
+			2022 - 고창, 담양, 전주, 소방본부
+			-->
+			<div class="pageIndicator">
+				<button class="prev" onclick="indicatorBox()" title="이전 버튼 바로가기"></button>
+				<button class="list" onclick="location.href='../index.html'">list</button>
+				<button class="next" onclick="indicatorBox()" title="다음 버튼 바로가기"></button>
+			</div>
+
+
+
+			<script>
+			const subVisual = document.querySelector(".sub_visual span");
+			const subVisualTitle = document.querySelector(".sub_visual h2");
+			const prevBtn = document.querySelector(".pageIndicator .prev");
+			const nextBtn = document.querySelector(".pageIndicator .next");
+
+			const currentLink = document.location.href; 
+			const localFullName = document.URL.substring(document.URL.lastIndexOf('/') + 1);
+			const localName = parseInt(localFullName.substring(localFullName.lastIndexOf('.'), 9));
+
+			const CURRENT_NUM = localName;
+			const PREV_NUM = localName - 1; //0
+			const NEXT_NUM = localName + 1; //0
+			const PAGE_NUM_PREV = String(PREV_NUM).padStart(2, "0"); //00
+			const PAGE_NUM_NEXT = String(NEXT_NUM).padStart(2, "0"); //00
+
+			//const subTitle = subVisualTitle.innerText;
+			const testBgColor = ['crimson', 'aqua', 'darkgray','floralwhite']
+			const subTitle = ['crimson', 'aqua', 'darkgray','floralwhite']
+			/*
+			const subTitle = [
+				'장수군 승마레저파크',
+				'고창_군립도서관',
+				'전라북도 농업기술원',
+				'익산시의회',
+				'고창군청',
+				'순창군청',
+				'전북도청',
+				'담양 대나무 축제',
+				'전남지원청(함평, 화순, 신안)',
+				'광주광역시 빅데이터',
+				'전북교육청',
+				'대구고등학교(템플릿)',
+				'익산시 체육시설예약시스템',
+				'비짓전주',
+				'임실군청',
+				'군산대 학과 개편'
+			]
+			*/
+			function indicatorTxt(){
+				subVisualTitle.innerText = subTitle[CURRENT_NUM];
+
+				subVisual.style.backgroundColor = testBgColor[CURRENT_NUM];	
+				prevBtn.style.backgroundColor = testBgColor[PREV_NUM];
+				nextBtn.style.backgroundColor = testBgColor[NEXT_NUM];
+
+				prevBtn.innerHTML = `<div><span>이전버튼<strong>${subTitle[PREV_NUM]}</strong></span></div>`;
+				nextBtn.innerHTML = `<div><span>다음버튼<strong>${subTitle[NEXT_NUM]}</strong></span></div>`;
+
+				if(localName === 0){
+					prevBtn.disabled = true;
+					prevBtn.style = `cursor:auto`;
+					prevBtn.innerHTML = `<div><span>이전버튼<strong>없습니다</strong></span></div>`;
+				}else if(localName === 13){
+					nextBtn.disabled = true;
+					nextBtn.style = `cursor:auto`;
+					nextBtn.innerHTML = `<div><span>다음버튼<strong>없습니다</strong></span></div>`;
+				}
+			}
+
+			function indicatorBox(){
+				if (window.location == currentLink) {
+					if(this.className == 'prev'){
+						console.log('subpage__'+PAGE_NUM_PREV)
+					}else{
+						console.log('subpage__'+PAGE_NUM_NEXT)
+					}
+				}
+			}
+
+			indicatorTxt();
+
+
+
+			//신규 붙여넣기
+			const conceptTitle = document.querySelector(".concept h2");
+			conceptTitle.innerText = subTitle[CURRENT_NUM];
+
+			</script>
+
+
+
+
+
+
+
+			</body>
+			</html>

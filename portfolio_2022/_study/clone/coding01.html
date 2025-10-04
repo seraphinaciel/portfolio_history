@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="scss/coding01.css">
+</head>
+
+<body>
+
+
+<header>
+	<h1>BEST HORROR SCENES</h1>
+	<h2>An ever growing collection featuring some of the best scenes in horror.</h2>
+	<p>“Best Horror Scenes” is a collection of scenes I feel are some of the most affecting in horror. Some may be simple black cat scares, others may be more subdued or nuanced. Many come from films that aren't necessarily “horror” but have elements or threads of horror.</p>
+	<nav>
+		<a href="">Newsletter</a>
+		<a href="">Suggest a Scene</a>
+		<a href="">YouTube</a>
+		<a href="">Twitter</a>
+		<a href="">Contact</a>
+		<a href="">RSS</a>
+		<a href="">Letterboxd</a>
+		<em>Best Horror Scenes is a love letter to the Horror film genre by Brandon Durham. Most film clips contain major spoilers, and it is recommended you don’t watch the clip if you plan on seeing the film.</em>
+	</nav>
+</header>
+<main>
+	<nav>Currently viewing <button>everything</button> sorted by <button>random</button>.</nav>
+	<article>
+		<h2>Green Room (2015)</h2>
+		<p>Directed by Jeremy Saulnier</p>
+		<section>
+			<h3><i>#</i>57</h3>
+			<video poster="https://besthorrorscenes.com/posters/57_green-room.png" src=""></video>
+			<span><button>↑</button> <em>2</em> <button>↓</button></span>
+		</section>
+		<div>Having seen and fallen completely in love with Jeremy Saulnier’s previous film, Blue Ruin (2013),<br>— B <strong>My rating: 9/10</strong></div>
+	</article>
+	<article>
+		<h2>Green Room (2015)</h2>
+		<p>Directed by Jeremy Saulnier</p>
+		<section>
+			<h3><i>#</i>57</h3>
+			<video poster="https://besthorrorscenes.com/posters/57_green-room.png" src=""></video>
+			<span><button>↑</button> <em>2</em> <button>↓</button></span>
+		</section>
+		<div>Having seen and fallen completely in love with Jeremy Saulnier’s previous film, Blue Ruin (2013),<br>— B <strong>My rating: 9/10</strong></div>
+	</article>
+	<article>
+		<h2>Green Room (2015)</h2>
+		<p>Directed by Jeremy Saulnier</p>
+		<section>
+			<h3><i>#</i>57</h3>
+			<video poster="https://besthorrorscenes.com/posters/57_green-room.png" src=""></video>
+			<span><button>↑</button> <em>2</em> <button>↓</button></span>
+		</section>
+		<div>Having seen and fallen completely in love with Jeremy Saulnier’s previous film, Blue Ruin (2013),<br>— B <strong>My rating: 9/10</strong></div>
+	</article>
+	<article>
+		<h2>Green Room (2015)</h2>
+		<p>Directed by Jeremy Saulnier</p>
+		<section>
+			<h3><i>#</i>57</h3>
+			<video poster="https://besthorrorscenes.com/posters/57_green-room.png" src=""></video>
+			<span><button>↑</button> <em>2</em> <button>↓</button></span>
+		</section>
+		<div>Having seen and fallen completely in love with Jeremy Saulnier’s previous film, Blue Ruin (2013),<br>— B <strong>My rating: 9/10</strong></div>
+	</article>
+	<article>
+		<h2>Green Room (2015)</h2>
+		<p>Directed by Jeremy Saulnier</p>
+		<section>
+			<h3><i>#</i>57</h3>
+			<video poster="https://besthorrorscenes.com/posters/57_green-room.png" src=""></video>
+			<span><button>↑</button> <em>2</em> <button>↓</button></span>
+		</section>
+		<div>Having seen and fallen completely in love with Jeremy Saulnier’s previous film, Blue Ruin (2013),<br>— B <strong>My rating: 9/10</strong></div>
+	</article>
+</main>
+
+<script>
+	const nav = document.querySelector("main nav");
+	window.addEventListener('scroll', () => {
+		const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+		const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+		const scrolled = (winScroll / height) * 100;
+		const sticky = nav.offsetTop;
+		if (window.pageYOffset > sticky) {
+			nav.classList.add("sticky")
+		} else {
+			nav.classList.remove("sticky");
+		}
+	});
+
+</script>
+
+</body></html>

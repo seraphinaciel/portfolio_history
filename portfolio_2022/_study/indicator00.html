@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>indicator</title>
+<meta name="title" content="Sera portfolio">
+<meta name="author" content="lee sera">
+<meta name="description" content="Sera portfolio">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<style>
+	*{border: 0;background: 0;margin:0;padding:0;}
+	.pageIndicator{height:80px;display: flex;justify-content: center;}
+	.pageIndicator button{width:50%;background: gray;}
+	.pageIndicator .prev{}
+	.pageIndicator .list{width:10%;background:skyblue}
+	.pageIndicator .next{}
+	.pageIndicator span{display:block}
+	.pageIndicator strong{display:block;color:}
+</style>
+
+<div class="pageIndicator">
+	<button class="prev">이전</button>
+	<button class="list">목록</button>
+	<button class="next">다음</button>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	
+<script>
+	
+const prevBtn = document.querySelector(".pageIndicator .prev");
+const nextBtn = document.querySelector(".pageIndicator .next");
+let currentLink = document.location.href; 
+const localFullName = document.URL.substring(document.URL.lastIndexOf('/') + 1);
+const localName = parseInt(localFullName.substring(localFullName.lastIndexOf('.'), 9));
+const PAGE_NUM_PREV = localName - 1;
+const PAGE_NUM_NEXT = localName + 1;
+
+//let PAGE_NUM = 0;
+	
+function indicatorTxt(){
+	prevBtn.style = `background:url('indicatorImg0${PAGE_NUM_PREV}.gif') top;background-size:cover;`;
+	nextBtn.style = `background:url('indicatorImg0${PAGE_NUM_NEXT}.gif') top;background-size:cover;`;
+	prevBtn.innerHTML = `<span>이전 페이지 <strong>돌아가시오!</strong></span>`;
+	nextBtn.innerHTML = `<span>다음 페이지 <strong>아무것도 음슴!</strong></span>`;
+	
+	if(localName === 0){
+		prevBtn.disabled = true;
+		prevBtn.style = ``;
+		prevBtn.innerHTML = `<span>이전 페이지 <strong>없습니다</strong></span>`;
+	}else if(localName === 13){
+		nextBtn.disabled = true;
+		nextBtn.style = ``;
+		nextBtn.innerHTML = `<span>이전 페이지 <strong>없습니다</strong></span>`;
+	}
+}
+
+function indicatorBox(){
+	if (window.location == currentLink) {
+		if(this.className == 'prev'){
+			let pageUrl = String(PAGE_NUM_PREV).padStart(2, "0");
+			console.log('prev : subpage__'+pageUrl+'.html');
+		}else{
+			let pageUrl = String(PAGE_NUM_NEXT).padStart(2, "0");
+			console.log('next : subpage__'+pageUrl+'.html');
+		}
+	}
+}
+indicatorTxt();
+prevBtn.addEventListener("click", indicatorBox);
+nextBtn.addEventListener("click", indicatorBox);
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
